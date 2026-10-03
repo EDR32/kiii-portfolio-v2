@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Circles from "@/components/layout/Circles";
-import Avatar from "@/modules/Home/components/Avatar";
+// import Avatar from "@/modules/Home/components/Avatar";
 import AboutCounters from "@/modules/About/components/AboutCounters";
 import { fadeIn } from "@/utils/variants";
 import { aboutData } from "@/modules/About/utils/constants";
@@ -12,21 +12,21 @@ const About = () => {
   const [index, setIndex] = useState(0);
 
   return (
-    <div className="min-h-screen bg-primary/30 py-32 text-center xl:text-left relative flex items-center">
+    <div className="min-h-screen bg-primary/30 py-32 text-center xl:text-left relative flex items-center overflow-hidden">
       <Circles />
 
       {/* Avatar Img for Desktop */}
-      <motion.div
+      {/* <motion.div
         variants={fadeIn("right", 0.2)}
         initial="hidden"
         animate="show"
         exit="hidden"
-        className="hidden xl:flex absolute bottom-0 -left-[370px] pointer-events-none"
+        className="hidden xl:flex absolute bottom-0 -left-100 pointer-events-none"
       >
         <Avatar />
-      </motion.div>
+      </motion.div> */}
 
-      <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6 px-6 md:px-16 xl:px-0">
+      <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-8 px-6 md:px-16 xl:px-0">
         {/* Left Column: Text & Counters */}
         <div className="flex-1 flex flex-col justify-center">
           <motion.h2
@@ -34,9 +34,9 @@ const About = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="h2 text-3xl md:text-5xl font-bold"
+            className="h2 text-3xl md:text-5xl font-bold leading-tight"
           >
-            Captivating <span className="text-accent">stories</span> birth magnificent designs.
+            Crafting <span className="text-accent">modern interfaces</span> with engineering precision.
           </motion.h2>
 
           <motion.p
@@ -44,11 +44,12 @@ const About = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0 text-white/70 text-sm md:text-base leading-relaxed"
+            className="max-w-125 mx-auto xl:mx-0 mb-6 xl:mb-10 px-2 xl:px-0 text-white/70 text-sm md:text-base leading-relaxed"
           >
-            10 years ago, I began freelancing as a developer. Since then, I have done remote work
-            for agencies, consulted for startups, and collaborated on digital products for business
-            and consumer use.
+            Lulusan S1 Teknik Informatika STTIKOM Insan Unggul (IPK 3.71) dengan passion
+            tinggi di bidang Frontend Development dan teknologi web. Berpengalaman
+            membangun antarmuka sistem e-Government seperti portal monitoring CCTV real-time
+            di Diskominfo Kota Serang serta aplikasi antarmuka modern dengan React, Next.js, dan TypeScript.
           </motion.p>
 
           {/* Counters */}
@@ -69,52 +70,75 @@ const About = () => {
           initial="hidden"
           animate="show"
           exit="hidden"
-          className="flex flex-col w-full xl:max-w-[48%] h-[480px]"
+          className="flex flex-col w-full xl:max-w-[50%] min-h-90"
         >
           {/* Tabs */}
-          <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
+          <div className="flex flex-wrap justify-center xl:justify-start gap-x-4 xl:gap-x-7 gap-y-2 mx-auto xl:mx-0 mb-6">
             {aboutData.map((item, itemIndex) => {
               return (
-                <div
+                <button
                   key={itemIndex}
+                  type="button"
                   className={`${
                     index === itemIndex
                       ? "text-accent after:w-full after:bg-accent after:transition-all after:duration-300"
-                      : "text-white/60"
-                  } cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white/20 after:absolute after:-bottom-1 after:left-0 pb-1`}
+                      : "text-white/60 hover:text-white"
+                  } cursor-pointer capitalize text-sm md:text-base xl:text-lg font-medium relative after:w-8 after:h-0.5 after:bg-white/20 after:absolute after:-bottom-1 after:left-0 pb-1 transition-colors`}
                   onClick={() => setIndex(itemIndex)}
                 >
                   {item.title}
-                </div>
+                </button>
               );
             })}
           </div>
 
           {/* Tab Content List */}
-          <div className="py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start">
+          <div className="py-2 flex flex-col gap-y-4 items-center xl:items-start max-h-95 overflow-y-auto pr-1">
             {aboutData[index].info.map((infoItem, infoIndex) => {
               return (
                 <div
                   key={infoIndex}
-                  className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60"
+                  className="w-full flex flex-col items-center xl:items-start text-white/70 bg-white/5 hover:bg-white/10 transition-colors duration-300 p-4 rounded-xl border border-white/10"
                 >
-                  {/* Title */}
-                  <div className="font-light mb-2 md:mb-0 text-sm md:text-base text-white/80">
-                    {infoItem.title}
+                  {/* Header Row: Title & Stage */}
+                  <div className="w-full flex flex-col sm:flex-row justify-between items-center sm:items-baseline gap-2 mb-1">
+                    <div className="font-semibold text-white/95 text-sm md:text-base">
+                      {infoItem.title}
+                    </div>
+                    {infoItem.stage && (
+                      <span className="text-xs text-accent bg-accent/10 border border-accent/20 px-2.5 py-0.5 rounded-full shrink-0 font-medium">
+                        {infoItem.stage}
+                      </span>
+                    )}
                   </div>
-                  <div className="hidden md:flex">-</div>
-                  {/* Stage */}
-                  {infoItem.stage && <div>{infoItem.stage}</div>}
-                  {/* Icons */}
-                  <div className="flex gap-x-4">
-                    {infoItem.icons?.map((icon, iconIndex) => {
-                      return (
-                        <div key={iconIndex} className="text-2xl text-white">
+
+                  {/* Subtitle / Institution */}
+                  {infoItem.subtitle && (
+                    <div className="text-xs md:text-sm text-white/60 mb-2 font-normal">
+                      {infoItem.subtitle}
+                    </div>
+                  )}
+
+                  {/* Description if available */}
+                  {infoItem.description && (
+                    <p className="text-xs md:text-sm text-white/70 leading-relaxed text-center xl:text-left">
+                      {infoItem.description}
+                    </p>
+                  )}
+
+                  {/* Icons row for Skills */}
+                  {infoItem.icons && (
+                    <div className="flex flex-wrap gap-4 mt-3 text-2xl text-white/80">
+                      {infoItem.icons.map((icon, iconIndex) => (
+                        <div
+                          key={iconIndex}
+                          className="hover:text-accent hover:scale-110 transition-all duration-200"
+                        >
                           {icon}
                         </div>
-                      );
-                    })}
-                  </div>
+                      ))}
+                    </div>
+                  )}
                 </div>
               );
             })}

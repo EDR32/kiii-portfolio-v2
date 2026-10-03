@@ -8,7 +8,7 @@ import { fadeIn } from "@/utils/variants";
 
 const Services = () => {
   return (
-    <div className="min-h-screen bg-primary/30 py-36 flex items-center relative">
+    <div className="min-h-screen bg-primary/30 py-36 flex items-center relative overflow-hidden">
       <Circles />
       <div className="container mx-auto px-6 md:px-16 xl:px-0">
         <div className="flex flex-col xl:flex-row gap-x-8">
@@ -28,11 +28,11 @@ const Services = () => {
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="mb-4 max-w-[400px] mx-auto lg:mx-0 text-white/70 text-sm md:text-base leading-relaxed"
+              className="mb-4 max-w-100 mx-auto lg:mx-0 text-white/70 text-sm md:text-base leading-relaxed"
             >
-              Comprehensive digital services designed to scale your business,
-              from modern frontend architecture and intuitive UX to full-stack
-              engineering and search engine optimization.
+              Layanan terintegrasi mulai dari pengembangan antarmuka web modern
+              (React, Next.js, TypeScript), implementasi platform digital & e-Government,
+              hingga arsitektur sistem dan infrastruktur jaringan komputer.
             </motion.p>
           </div>
 

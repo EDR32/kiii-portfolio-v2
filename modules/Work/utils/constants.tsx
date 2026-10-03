@@ -5,40 +5,56 @@ export const workSlides: { slides: WorkSlide[] } = {
     {
       images: [
         {
-          title: "Project 1",
+          title: "Monitoring CCTV Kota Serang",
+          category: "e-Government / Real-Time Video",
           path: "/thumb1.jpg",
+          url: "https://github.com/EDR32",
         },
         {
-          title: "Project 2",
+          title: "Enterprise Frontend Portal",
+          category: "React & Next.js / TypeScript",
           path: "/thumb2.jpg",
+          url: "https://github.com/EDR32",
         },
         {
-          title: "Project 3",
+          title: "Academic & Campus Portal",
+          category: "STTIKOM Informatics System",
           path: "/thumb3.jpg",
+          url: "https://github.com/EDR32",
         },
         {
-          title: "Project 4",
+          title: "HAMKA Research & Tech Portal",
+          category: "Student Organization Web",
           path: "/thumb4.jpg",
+          url: "https://github.com/EDR32",
         },
       ],
     },
     {
       images: [
         {
-          title: "Project 4",
-          path: "/thumb4.jpg",
-        },
-        {
-          title: "Project 1",
-          path: "/thumb1.jpg",
-        },
-        {
-          title: "Project 2",
+          title: "Network Topology & Diagnostics",
+          category: "Infrastructure & Connectivity",
           path: "/thumb2.jpg",
+          url: "https://github.com/EDR32",
         },
         {
-          title: "Project 3",
+          title: "Public Service Dashboard",
+          category: "Diskominfo Kota Serang",
+          path: "/thumb1.jpg",
+          url: "https://github.com/EDR32",
+        },
+        {
+          title: "Interactive Developer Portfolio",
+          category: "Next.js 16 / Tailwind CSS",
+          path: "/thumb4.jpg",
+          url: "https://github.com/EDR32",
+        },
+        {
+          title: "RESTful API Integration Suite",
+          category: "Web Engineering / Laravel",
           path: "/thumb3.jpg",
+          url: "https://github.com/EDR32",
         },
       ],
     },

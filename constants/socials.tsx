@@ -1,23 +1,14 @@
 import React from "react";
-import {
-  RiYoutubeLine,
-  RiInstagramLine,
-  RiFacebookLine,
-  RiDribbbleLine,
-  RiBehanceLine,
-  RiPinterestLine,
-  RiGithubLine,
-  RiLinkedinLine,
-} from "react-icons/ri";
+import { GitBranch, Mail, Share2, Camera } from "lucide-react";
 import { SocialItem } from "@/types";
 
 export const socialLinks: SocialItem[] = [
-  { name: "YouTube", url: "https://youtube.com", icon: <RiYoutubeLine /> },
-  { name: "Instagram", url: "https://instagram.com", icon: <RiInstagramLine /> },
-  { name: "Facebook", url: "https://facebook.com", icon: <RiFacebookLine /> },
-  { name: "Dribbble", url: "https://dribbble.com", icon: <RiDribbbleLine /> },
-  { name: "Behance", url: "https://behance.net", icon: <RiBehanceLine /> },
-  { name: "Pinterest", url: "https://pinterest.com", icon: <RiPinterestLine /> },
-  { name: "GitHub", url: "https://github.com", icon: <RiGithubLine /> },
-  { name: "LinkedIn", url: "https://linkedin.com", icon: <RiLinkedinLine /> },
+  { name: "GitHub", url: "https://github.com/EDR32", icon: <GitBranch size={20} /> },
+  { name: "Email", url: "mailto:ekidama91@gmail.com", icon: <Mail size={20} /> },
+  {
+    name: "LinkedIn",
+    url: "https://www.linkedin.com/in/eki-dama-rukmana-169280388/",
+    icon: <Share2 size={20} />,
+  },
+  { name: "Instagram", url: "https://www.instagram.com/kiii.dama/", icon: <Camera size={20} /> },
 ];

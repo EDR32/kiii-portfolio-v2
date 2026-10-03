@@ -4,10 +4,11 @@ import { motion } from "framer-motion";
 import ContactForm from "@/modules/Contact/components/ContactForm";
 import Circles from "@/components/layout/Circles";
 import { fadeIn } from "@/utils/variants";
+import { Mail, MapPin } from "lucide-react";
 
 const Contact = () => {
   return (
-    <div className="min-h-screen bg-primary/30 py-32 flex items-center relative">
+    <div className="min-h-screen bg-primary/30 py-32 flex items-center relative overflow-hidden">
       <Circles />
       <div className="container mx-auto px-6 md:px-16 xl:px-0">
         <div className="flex flex-col items-center justify-center">
@@ -17,10 +18,34 @@ const Contact = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="h2 text-center text-3xl md:text-5xl font-bold mb-12"
+            className="h2 text-center text-3xl md:text-5xl font-bold mb-4"
           >
             Let&apos;s <span className="text-accent">connect.</span>
           </motion.h2>
+
+          {/* Quick Contact Info */}
+          <motion.div
+            variants={fadeIn("up", 0.3)}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+            className="flex flex-wrap justify-center gap-3 md:gap-6 mb-8 text-xs md:text-sm text-white/80"
+          >
+            <a
+              href="mailto:ekidama91@gmail.com"
+              className="flex items-center gap-x-2 bg-white/5 hover:bg-white/10 hover:border-accent border border-white/10 px-4 py-2 rounded-full transition-all duration-300"
+            >
+              <Mail className="text-accent text-base md:text-lg w-4 h-4 md:w-5 md:h-5" />
+              <span>ekidama91@gmail.com</span>
+            </a>
+            <a
+              href="https://maps.app.goo.gl/aavMrueN1Yn9fz3y8"
+              className="flex items-center gap-x-2 bg-white/5 border border-white/10 px-4 py-2 rounded-full"
+            >
+              <MapPin className="text-accent text-base md:text-lg w-4 h-4 md:w-5 md:h-5" />
+              <span>Kota Serang, Banten</span>
+            </a>
+          </motion.div>
 
           {/* Form */}
           <motion.div
@@ -28,7 +53,7 @@ const Contact = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="w-full max-w-[700px] mx-auto"
+            className="w-full max-w-175 mx-auto"
           >
             <ContactForm />
           </motion.div>

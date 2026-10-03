@@ -1,27 +1,15 @@
 import React from "react";
-import {
-  HiHome,
-  HiUser,
-  HiViewColumns,
-  HiRectangleGroup,
-  HiChatBubbleBottomCenterText,
-  HiEnvelope,
-} from "react-icons/hi2";
+import { Home, User, LayoutGrid, Briefcase, Mail } from "lucide-react";
 import { NavItem } from "@/types";
 
 export const navData: NavItem[] = [
-  { name: "home", path: "/", icon: <HiHome /> },
-  { name: "about", path: "/about", icon: <HiUser /> },
-  { name: "services", path: "/services", icon: <HiRectangleGroup /> },
-  { name: "work", path: "/work", icon: <HiViewColumns /> },
-  {
-    name: "testimonials",
-    path: "/testimonials",
-    icon: <HiChatBubbleBottomCenterText />,
-  },
+  { name: "home", path: "/", icon: <Home size={22} /> },
+  { name: "about", path: "/about", icon: <User size={22} /> },
+  { name: "services", path: "/services", icon: <LayoutGrid size={22} /> },
+  { name: "work", path: "/work", icon: <Briefcase size={22} /> },
   {
     name: "contact",
     path: "/contact",
-    icon: <HiEnvelope />,
+    icon: <Mail size={22} />,
   },
 ];

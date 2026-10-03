@@ -8,7 +8,7 @@ import { fadeIn } from "@/utils/variants";
 
 const Work = () => {
   return (
-    <div className="min-h-screen bg-primary/30 py-36 flex items-center relative">
+    <div className="min-h-screen bg-primary/30 py-36 flex items-center relative overflow-hidden">
       <Circles />
       <div className="container mx-auto px-6 md:px-16 xl:px-0">
         <div className="flex flex-col xl:flex-row gap-x-8">
@@ -28,11 +28,11 @@ const Work = () => {
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="mb-4 max-w-[400px] mx-auto lg:mx-0 text-white/70 text-sm md:text-base leading-relaxed"
+              className="mb-4 max-w-100 mx-auto lg:mx-0 text-white/70 text-sm md:text-base leading-relaxed"
             >
-              Explore a curated selection of recent web applications, responsive
-              interfaces, and full-stack projects showcasing modern UI/UX design
-              and robust development practices.
+              Kumpulan proyek pengembangan web, antarmuka portal layanan publik &amp; e-Government
+              (seperti sistem monitoring CCTV Diskominfo Kota Serang), aplikasi web modern
+              dengan React &amp; Next.js, serta infrastruktur teknologi.
             </motion.p>
           </div>
 

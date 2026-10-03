@@ -2,7 +2,7 @@
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Pagination } from "swiper/modules";
-import { RxArrowTopRight } from "react-icons/rx";
+import { ArrowUpRight } from "lucide-react";
 import { serviceData } from "@/modules/Services/utils/constants";
 
 // Swiper styles
@@ -28,7 +28,7 @@ const ServiceSlider = () => {
         clickable: true,
       }}
       modules={[FreeMode, Pagination]}
-      className="h-[240px] sm:h-[340px]"
+      className="h-60 sm:h-85"
     >
       {serviceData.map((item, index) => {
         return (
@@ -39,13 +39,13 @@ const ServiceSlider = () => {
               {/* Title & Description */}
               <div className="mb-8">
                 <div className="mb-2 text-lg font-semibold">{item.title}</div>
-                <p className="max-w-[350px] leading-normal text-sm text-white/60">
+                <p className="max-w-87.5 leading-normal text-sm text-white/60">
                   {item.description}
                 </p>
               </div>
               {/* Arrow */}
               <div className="text-3xl">
-                <RxArrowTopRight className="group-hover:rotate-45 group-hover:text-accent transition-all duration-300" />
+                <ArrowUpRight className="w-8 h-8 group-hover:rotate-45 group-hover:text-accent transition-all duration-300" />
               </div>
             </div>
           </SwiperSlide>

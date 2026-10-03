@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
-import { FaQuoteLeft } from "react-icons/fa";
+import { Quote } from "lucide-react";
 import { testimonialData } from "@/modules/Testimonials/utils/constants";
 
 // Swiper styles
@@ -19,14 +19,14 @@ const TestimonialSlider = () => {
         clickable: true,
       }}
       modules={[Navigation, Pagination]}
-      className="h-[400px]"
+      className="h-100"
     >
       {testimonialData.map((person, index) => {
         return (
           <SwiperSlide key={index}>
             <div className="flex flex-col items-center md:flex-row gap-x-8 h-full px-16">
               {/* Avatar, name, position */}
-              <div className="w-full max-w-[300px] flex flex-col xl:justify-center items-center relative mx-auto xl:mx-0">
+              <div className="w-full max-w-175 flex flex-col xl:justify-center items-center relative mx-auto xl:mx-0">
                 <div className="flex flex-col justify-center text-center">
                   {/* Avatar */}
                   <div className="mb-2 mx-auto">
@@ -50,7 +50,7 @@ const TestimonialSlider = () => {
               <div className="flex-1 flex flex-col justify-center before:w-px xl:before:bg-white/20 xl:before:absolute xl:before:left-0 xl:before:h-50 relative xl:pl-20">
                 {/* Quote icon */}
                 <div className="mb-4">
-                  <FaQuoteLeft className="text-4xl xl:text-6xl text-white/20 mx-auto md:mx-0" />
+                  <Quote className="w-10 h-10 xl:w-14 xl:h-14 text-white/20 mx-auto md:mx-0" />
                 </div>
                 {/* Message */}
                 <div className="xl:text-lg text-center md:text-left text-white/80 font-light">

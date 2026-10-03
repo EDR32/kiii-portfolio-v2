@@ -16,8 +16,19 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio V2",
-  description: "Modern & interactive personal developer portfolio",
+  title: "Eki Dama Rukmana | Frontend Developer Portfolio",
+  description:
+    "Portfolio of Eki Dama Rukmana — Frontend Developer specializing in React, Next.js, and TypeScript. Informatics Engineering graduate (GPA 3.71) with e-Government and modern web development experience.",
+  keywords: [
+    "Eki Dama Rukmana",
+    "Frontend Developer",
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Tailwind CSS",
+    "Portfolio",
+    "Web Developer Indonesia",
+  ],
 };
 
 export default function RootLayout({
