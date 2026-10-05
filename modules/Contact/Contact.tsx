@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 import ContactForm from "@/modules/Contact/components/ContactForm";
 import Circles from "@/components/layout/Circles";
 import { fadeIn } from "@/utils/variants";
-// import { Mail, MapPin } from "lucide-react";
-// import Link from "next/link";
+import { Mail, MapPin } from "lucide-react";
+import Link from "next/link";
 
 const Contact = () => {
   return (
@@ -39,9 +39,9 @@ const Contact = () => {
               <Mail className="text-accent text-base md:text-lg w-4 h-4 md:w-5 md:h-5" />
               <span>ekidama91@gmail.com</span>
             </a> */}
-            {/* <Link
+            <Link
               key="Email"
-              href="mailto:ekidama91@gmail.com"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=ekidama91@gmail.com&su=Hire%20Me&body=Halo,%20saya%20tertarik%20untuk%20bekerja%20sama%20dengan%20anda."
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-x-2 bg-white/5 hover:bg-white/10 hover:border-accent border border-white/10 px-4 py-2 rounded-full transition-all duration-300"
@@ -60,7 +60,7 @@ const Contact = () => {
             >
               <MapPin className="text-accent text-base md:text-lg w-4 h-4 md:w-5 md:h-5" />
               <span>Kota Serang, Banten</span>
-            </Link> */}
+            </Link>
           </motion.div>
 
           {/* Form */}
