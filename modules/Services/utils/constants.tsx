@@ -31,6 +31,6 @@ export const serviceData: ServiceItem[] = [
     icon: <Monitor size={36} />,
     title: "Network & Infrastructure",
     description:
-      "Konfigurasi router, switch, access point, rancang topologi jaringan lokal, dan pemeliharaan hardware/software.",
+      "Konfigurasi router, switch, access point, rancang topologi jaringan lokal, serta pemeliharaan hardware/software.",
   },
 ];

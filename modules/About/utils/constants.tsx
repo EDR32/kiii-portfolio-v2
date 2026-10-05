@@ -58,6 +58,13 @@ export const aboutData: AboutCategory[] = [
           "Berkontribusi di bidang Frontend Developer dalam membuat tampilan antarmuka modern dan responsif menggunakan React, Next.js, dan TypeScript.",
       },
       {
+        title: "IT Programmer",
+        subtitle: "PT. Buana Centra Swakarsa - Kota Cilegon, Banten",
+        stage: "Okt 2026 - Apr 2026",
+        description:
+          "Berkontribusi di bidang IT Programmer meliputi perbaikan dan pengembangan sistem absensi, QC aplikasi mobile, pananganan masalah hardware dan sosialisasi penggunaan aplikasi kepada user.",
+      },
+      {
         title: "E-Government Frontend Developer",
         subtitle: "Diskominfo Kota Serang - Kota Serang, Banten",
         stage: "Jul 2024 - Agu 2024",

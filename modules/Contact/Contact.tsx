@@ -5,6 +5,7 @@ import ContactForm from "@/modules/Contact/components/ContactForm";
 import Circles from "@/components/layout/Circles";
 import { fadeIn } from "@/utils/variants";
 import { Mail, MapPin } from "lucide-react";
+import Link from "next/link";
 
 const Contact = () => {
   return (
@@ -31,20 +32,35 @@ const Contact = () => {
             exit="hidden"
             className="flex flex-wrap justify-center gap-3 md:gap-6 mb-8 text-xs md:text-sm text-white/80"
           >
-            <a
+            {/* <a
               href="mailto:ekidama91@gmail.com"
               className="flex items-center gap-x-2 bg-white/5 hover:bg-white/10 hover:border-accent border border-white/10 px-4 py-2 rounded-full transition-all duration-300"
             >
               <Mail className="text-accent text-base md:text-lg w-4 h-4 md:w-5 md:h-5" />
               <span>ekidama91@gmail.com</span>
-            </a>
-            <a
+            </a> */}
+            <Link
+              key="Email"
+              href="mailto:ekidama91@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-x-2 bg-white/5 hover:bg-white/10 hover:border-accent border border-white/10 px-4 py-2 rounded-full transition-all duration-300"
+              aria-label="Email"
+            >
+              <Mail className="text-accent text-base md:text-lg w-4 h-4 md:w-5 md:h-5" />
+              <span>ekidama91@gmail.com</span>
+            </Link>
+            <Link
+              key="Address"
               href="https://maps.app.goo.gl/aavMrueN1Yn9fz3y8"
-              className="flex items-center gap-x-2 bg-white/5 border border-white/10 px-4 py-2 rounded-full"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-x-2 bg-white/5 hover:bg-white/10 hover:border-accent border border-white/10 px-4 py-2 rounded-full transition-all duration-300"
+              aria-label="Address"
             >
               <MapPin className="text-accent text-base md:text-lg w-4 h-4 md:w-5 md:h-5" />
               <span>Kota Serang, Banten</span>
-            </a>
+            </Link>
           </motion.div>
 
           {/* Form */}

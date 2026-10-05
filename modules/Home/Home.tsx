@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import ParticlesContainer from "@/modules/Home/components/ParticlesContainer";
-import ProjectsBtn from "@/modules/Home/components/ProjectsBtn";
+import AboutBtn from "@/modules/Home/components/AboutBtn";
 import Avatar from "@/modules/Home/components/Avatar";
 import { fadeIn } from "@/utils/variants";
 
@@ -37,7 +37,7 @@ const Home = () => {
 
           {/* Button on Mobile */}
           <div className="flex justify-center xl:hidden relative z-10">
-            <ProjectsBtn />
+            <AboutBtn />
           </div>
 
           {/* Button on Desktop */}
@@ -48,7 +48,7 @@ const Home = () => {
             exit="hidden"
             className="hidden xl:flex"
           >
-            <ProjectsBtn />
+            <AboutBtn />
           </motion.div>
         </div>
       </div>
