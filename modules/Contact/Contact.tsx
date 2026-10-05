@@ -48,7 +48,7 @@ const Contact = () => {
               aria-label="Email"
             >
               <Mail className="text-accent text-base md:text-lg w-4 h-4 md:w-5 md:h-5" />
-              <span>ekidama91@gmail.com</span>
+              <span>Mail Me</span>
             </Link>
             <Link
               key="Address"
@@ -59,7 +59,7 @@ const Contact = () => {
               aria-label="Address"
             >
               <MapPin className="text-accent text-base md:text-lg w-4 h-4 md:w-5 md:h-5" />
-              <span>Kota Serang, Banten</span>
+              <span>My Address</span>
             </Link>
           </motion.div>
 
