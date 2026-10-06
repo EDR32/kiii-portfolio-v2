@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Sora, Poppins } from "next/font/google";
 import "./globals.css";
 import Layout from "@/components/layout/Layout";
+import { Analytics } from "@vercel/analytics/next";
 
 const sora = Sora({
   subsets: ["latin"],
@@ -42,6 +43,7 @@ export default function RootLayout({
         className={`${sora.variable} ${poppins.variable} font-sora bg-primary text-white antialiased`}
       >
         <Layout>{children}</Layout>
+        <Analytics />
       </body>
     </html>
   );
