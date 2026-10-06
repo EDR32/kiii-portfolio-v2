@@ -3,6 +3,7 @@ import { Sora, Poppins } from "next/font/google";
 import "./globals.css";
 import Layout from "@/components/layout/Layout";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const sora = Sora({
   subsets: ["latin"],
@@ -44,6 +45,7 @@ export default function RootLayout({
       >
         <Layout>{children}</Layout>
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
