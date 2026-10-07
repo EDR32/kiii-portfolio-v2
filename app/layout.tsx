@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
-import { Sora, Poppins } from "next/font/google";
+import { Sora, Poppins, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Layout from "@/components/layout/Layout";
+import SmoothScrollProvider from "@/components/providers/SmoothScroll";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { cn } from "@/lib/utils";
+
+const jetbrainsMono = JetBrains_Mono({subsets:['latin'],variable:'--font-mono'});
 
 const sora = Sora({
   subsets: ["latin"],
@@ -39,11 +43,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={cn("dark", jetbrainsMono.variable)}>
       <body
-        className={`${sora.variable} ${poppins.variable} font-sora bg-primary text-white antialiased`}
+        className={`${sora.variable} ${poppins.variable} font-sora bg-primary text-white antialiased selection:bg-accent selection:text-white`}
       >
-        <Layout>{children}</Layout>
+        <SmoothScrollProvider>
+          <Layout>{children}</Layout>
+        </SmoothScrollProvider>
         <Analytics />
         <SpeedInsights />
       </body>

@@ -1,11 +1,5 @@
-import type { Metadata } from "next";
-import Testimonials from "@/modules/Testimonials/Testimonials";
-
-export const metadata: Metadata = {
-  title: "Testimonials | Portfolio V2",
-  description: "Read recommendations and reviews from satisfied clients",
-};
+import { redirect } from "next/navigation";
 
 export default function TestimonialsPage() {
-  return <Testimonials />;
+  redirect("/#testimonials");
 }

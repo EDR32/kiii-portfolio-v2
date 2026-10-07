@@ -17,8 +17,8 @@ const Work = () => {
             <motion.h2
               variants={fadeIn("up", 0.2)}
               initial="hidden"
-              animate="show"
-              exit="hidden"
+              whileInView="show"
+              viewport={{ once: true, amount: 0.2 }}
               className="h2 text-3xl md:text-5xl font-bold xl:mt-12"
             >
               My work <span className="text-accent">.</span>
@@ -26,8 +26,8 @@ const Work = () => {
             <motion.p
               variants={fadeIn("up", 0.4)}
               initial="hidden"
-              animate="show"
-              exit="hidden"
+              whileInView="show"
+              viewport={{ once: true, amount: 0.2 }}
               className="mb-4 max-w-100 mx-auto lg:mx-0 text-white/70 text-sm md:text-base leading-relaxed"
             >
               Kumpulan proyek pengembangan web, antarmuka portal layanan publik &amp; e-Government
@@ -40,8 +40,8 @@ const Work = () => {
           <motion.div
             variants={fadeIn("down", 0.6)}
             initial="hidden"
-            animate="show"
-            exit="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.2 }}
             className="w-full xl:max-w-[65%]"
           >
             <WorkSlider />
