@@ -7,7 +7,6 @@ import {
   User,
   LayoutGrid,
   Briefcase,
-  Quote,
   Mail,
 } from "lucide-react";
 
@@ -33,11 +32,6 @@ const navItems = [
     href: "#work",
   },
   {
-    title: "Testimonials",
-    icon: <Quote className="h-full w-full" />,
-    href: "#testimonials",
-  },
-  {
     title: "Contact",
     icon: <Mail className="h-full w-full" />,
     href: "#contact",
@@ -48,7 +42,7 @@ export default function NavFloatingDock() {
   const [activeHref, setActiveHref] = useState("#home");
 
   useEffect(() => {
-    const sectionIds = ["home", "about", "services", "work", "testimonials", "contact"];
+    const sectionIds = ["home", "about", "services", "work", "contact"];
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {

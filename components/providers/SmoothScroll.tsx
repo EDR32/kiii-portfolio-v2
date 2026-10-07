@@ -23,11 +23,14 @@ export default function SmoothScrollProvider({
       ref={lenisRef}
       root
       options={{
-        lerp: 0.08,
         duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        orientation: "vertical",
+        gestureOrientation: "vertical",
         smoothWheel: true,
         wheelMultiplier: 1,
-        touchMultiplier: 1.5,
+        touchMultiplier: 1.8,
+        syncTouch: false,
       }}
     >
       {children}

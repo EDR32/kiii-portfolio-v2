@@ -9,7 +9,12 @@ interface LayoutProps {
 
 const Layout = ({ children }: LayoutProps) => {
   return (
-    <div className="page bg-site bg-cover bg-center bg-no-repeat bg-fixed text-white font-sora relative min-h-screen flex flex-col justify-between">
+    <div className="page text-white font-sora relative min-h-screen flex flex-col justify-between">
+      {/* GPU-accelerated fixed background (eliminates scroll repaints) */}
+      <div
+        className="fixed inset-0 -z-10 bg-site bg-cover bg-center bg-no-repeat pointer-events-none transform-gpu"
+        aria-hidden="true"
+      />
       <TopLeftImg />
       <NavFloatingDock />
       <Header />

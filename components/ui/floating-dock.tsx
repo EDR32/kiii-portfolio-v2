@@ -16,7 +16,7 @@ import {
   useTransform,
 } from "motion/react";
 
-import { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 
 export const FloatingDock = ({
   items,
@@ -142,7 +142,7 @@ const FloatingDockDesktop = ({
       onMouseMove={(e) => mouseX.set(e.pageX)}
       onMouseLeave={() => mouseX.set(Infinity)}
       className={cn(
-        "mx-auto hidden h-16 items-end gap-4 rounded-2xl bg-neutral-950/80 border border-white/15 backdrop-blur-xl px-4 pb-3 shadow-2xl md:flex",
+        "mx-auto hidden h-16 items-end gap-3.5 rounded-2xl bg-neutral-950/85 border border-white/15 backdrop-blur-xl px-3.5 pb-2.5 shadow-2xl md:flex transform-gpu",
         className,
       )}
     >
@@ -172,42 +172,41 @@ function IconContainer({
   isActive?: boolean;
 }) {
   const ref = useRef<HTMLDivElement>(null);
+  const boundsRef = useRef({ x: 0, width: 44 });
+
+  // Cache bounds to completely prevent getBoundingClientRect forced layout reflows during mousemove
+  const measureBounds = () => {
+    if (ref.current) {
+      const rect = ref.current.getBoundingClientRect();
+      boundsRef.current = { x: rect.x, width: rect.width };
+    }
+  };
+
+  useEffect(() => {
+    measureBounds();
+    window.addEventListener("resize", measureBounds, { passive: true });
+    return () => window.removeEventListener("resize", measureBounds);
+  }, []);
 
   const distance = useTransform(mouseX, (val) => {
-    const bounds = ref.current?.getBoundingClientRect() ?? { x: 0, width: 0 };
-    return val - bounds.x - bounds.width / 2;
+    return val - boundsRef.current.x - boundsRef.current.width / 2;
   });
 
-  const widthTransform = useTransform(distance, [-150, 0, 150], [42, 72, 42]);
-  const heightTransform = useTransform(distance, [-150, 0, 150], [42, 72, 42]);
+  // Snappy responsive scale range
+  const sizeTransform = useTransform(distance, [-120, 0, 120], [44, 68, 44]);
+  const iconSizeTransform = useTransform(distance, [-120, 0, 120], [20, 32, 20]);
 
-  const widthTransformIcon = useTransform(distance, [-150, 0, 150], [20, 36, 20]);
-  const heightTransformIcon = useTransform(
-    distance,
-    [-150, 0, 150],
-    [20, 36, 20],
-  );
-
-  const width = useSpring(widthTransform, {
-    mass: 0.1,
-    stiffness: 150,
-    damping: 12,
-  });
-  const height = useSpring(heightTransform, {
-    mass: 0.1,
-    stiffness: 150,
-    damping: 12,
+  // High-performance snappy spring physics (stiffness 280, damping 18)
+  const size = useSpring(sizeTransform, {
+    mass: 0.08,
+    stiffness: 280,
+    damping: 18,
   });
 
-  const widthIcon = useSpring(widthTransformIcon, {
-    mass: 0.1,
-    stiffness: 150,
-    damping: 12,
-  });
-  const heightIcon = useSpring(heightTransformIcon, {
-    mass: 0.1,
-    stiffness: 150,
-    damping: 12,
+  const iconSize = useSpring(iconSizeTransform, {
+    mass: 0.08,
+    stiffness: 280,
+    damping: 18,
   });
 
   const [hovered, setHovered] = useState(false);
@@ -216,11 +215,14 @@ function IconContainer({
     <a href={href} onClick={(e) => handleSmoothScroll(e, href)}>
       <motion.div
         ref={ref}
-        style={{ width, height }}
-        onMouseEnter={() => setHovered(true)}
+        style={{ width: size, height: size }}
+        onMouseEnter={() => {
+          measureBounds();
+          setHovered(true);
+        }}
         onMouseLeave={() => setHovered(false)}
         className={cn(
-          "relative flex aspect-square items-center justify-center rounded-full bg-neutral-900/90 border transition-all group",
+          "relative flex aspect-square items-center justify-center rounded-full bg-neutral-900/90 border transition-colors duration-150 group transform-gpu will-change-[width,height]",
           isActive
             ? "border-accent text-accent shadow-[0_0_14px_rgba(241,48,36,0.35)]"
             : "border-white/10 text-neutral-300 hover:text-white hover:border-accent/60"
@@ -232,14 +234,14 @@ function IconContainer({
               initial={{ opacity: 0, y: 10, x: "-50%" }}
               animate={{ opacity: 1, y: 0, x: "-50%" }}
               exit={{ opacity: 0, y: 2, x: "-50%" }}
-              className="absolute -top-9 left-1/2 w-fit rounded-lg border border-white/15 bg-neutral-950/95 px-2.5 py-1 text-xs whitespace-pre font-medium text-white shadow-xl backdrop-blur-md"
+              className="absolute -top-9 left-1/2 w-fit rounded-lg border border-white/15 bg-neutral-950/95 px-2.5 py-1 text-xs whitespace-pre font-medium text-white shadow-xl backdrop-blur-md pointer-events-none"
             >
               {title}
             </motion.div>
           )}
         </AnimatePresence>
         <motion.div
-          style={{ width: widthIcon, height: heightIcon }}
+          style={{ width: iconSize, height: iconSize }}
           className="flex items-center justify-center"
         >
           {icon}

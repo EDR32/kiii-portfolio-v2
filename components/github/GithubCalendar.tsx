@@ -5,7 +5,7 @@ import { GitHubCalendar } from "react-github-calendar";
 
 export default function GithubActivity() {
   return (
-    <div className="w-full flex flex-col items-center justify-center rounded-2xl backdrop-blur-sm">
+    <div className="w-full flex flex-col items-center justify-center rounded-2xl backdrop-blur-sm bg-white/10 border border-white/50 p-6">
       <div className="flex items-center gap-x-3 mb-6">
         <h3 className="text-xl sm:text-2xl font-bold text-white">
           GitHub <span className="text-accent">Contributions</span>
@@ -15,10 +15,10 @@ export default function GithubActivity() {
         </span>
       </div>
 
-      <div className="w-full overflow-x-auto flex justify-center py-2 max-w-full">
+      <div className="w-full overflow-x-auto flex justify-center py-2">
         <GitHubCalendar
           username="EDR32"
-          blockSize={20}
+          blockSize={24}
           blockMargin={4}
           fontSize={13}
           colorScheme="dark"

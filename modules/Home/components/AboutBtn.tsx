@@ -32,6 +32,7 @@ const AboutBtn = () => {
           height={148}
           alt="About Me"
           className="animate-spin-slow w-full h-full max-w-35.25 max-h-35.25"
+          style={{ width: "auto", height: "auto" }}
         />
         <ArrowRight className="absolute text-4xl w-9 h-9 group-hover:translate-x-2 transition-all duration-300 text-white" />
       </a>

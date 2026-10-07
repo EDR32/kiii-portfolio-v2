@@ -18,7 +18,7 @@ const ParticlesContainer = () => {
           value: "",
         },
       },
-      fpsLimit: 120,
+      fpsLimit: 60,
       interactivity: {
         events: {
           onClick: {
@@ -52,7 +52,7 @@ const ParticlesContainer = () => {
           width: 1,
         },
         collisions: {
-          enable: true,
+          enable: false,
         },
         move: {
           direction: "none",
@@ -68,7 +68,7 @@ const ParticlesContainer = () => {
           density: {
             enable: true,
           },
-          value: 80,
+          value: 45,
         },
         opacity: {
           value: 0.5,

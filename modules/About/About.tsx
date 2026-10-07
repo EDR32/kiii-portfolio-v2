@@ -6,7 +6,12 @@ import Circles from "@/components/layout/Circles";
 import AboutCounters from "@/modules/About/components/AboutCounters";
 import { fadeIn } from "@/utils/variants";
 import { aboutData } from "@/modules/About/utils/constants";
-import GithubActivity from "@/components/github/GithubCalendar";
+import dynamic from "next/dynamic";
+
+const GithubActivity = dynamic(
+  () => import("@/components/github/GithubCalendar"),
+  { ssr: false }
+);
 
 const About = () => {
   const [index, setIndex] = useState(0);
