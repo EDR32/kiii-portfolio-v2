@@ -28,7 +28,7 @@ const Contact = () => {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.2 }}
-            className="flex flex-wrap justify-center gap-3 md:gap-6 mb-8 text-xs md:text-sm text-white/80"
+            className="flex flex-wrap justify-center gap-3 md:gap-6 mb-8 text-sm md:text-sm text-white/80"
           >
             {/* <a
               href="mailto:ekidama91@gmail.com"

@@ -74,13 +74,13 @@ const About = () => {
                   <div className="font-semibold text-white text-base md:text-lg">
                     {skillGroup.title}
                   </div>
-                  <span className="text-xs text-accent bg-accent/10 border border-accent/20 px-2.5 py-0.5 rounded-full font-medium">
+                  <span className="text-sm text-accent bg-accent/10 border border-accent/20 px-2.5 py-0.5 rounded-full font-medium">
                     {groupIdx === 0 ? "Core Focus" : groupIdx === 1 ? "Web Systems" : "Infrastructure"}
                   </span>
                 </div>
 
                 {skillGroup.subtitle && (
-                  <div className="text-xs md:text-sm text-white/60 mb-3 font-normal text-center xl:text-left">
+                  <div className="text-sm md:text-sm text-white/60 mb-3 font-normal text-center xl:text-left">
                     {skillGroup.subtitle}
                   </div>
                 )}

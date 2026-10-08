@@ -1,4 +1,6 @@
-import React from 'react';
+"use client";
+
+import React, { useEffect } from 'react';
 import {
   Dialog,
   DialogContent,
@@ -43,27 +45,46 @@ const ModalDialog = ({
 }: ModalProps) => {
   const { screenHeight } = useWindowsLayout();
 
+  useEffect(() => {
+    if (open) {
+      const lenis = (window as unknown as { __lenis?: { stop: () => void; start: () => void } }).__lenis;
+      lenis?.stop();
+      return () => {
+        lenis?.start();
+      };
+    }
+  }, [open]);
+
   return (
     <Dialog open={open} onOpenChange={handleClose}>
       <DialogContent
-        className={`${widthDialogClasses[maxWidth]} bg-surface drop-shadow-shadow max-w-7xl gap-0 shadow-xl`}
+        data-lenis-prevent
+        className={`${widthDialogClasses[maxWidth]} bg-[#181931] border border-white/10 text-white shadow-2xl p-6 sm:p-8 rounded-2xl gap-0 max-h-[90vh] flex flex-col overscroll-contain`}
         showCloseButton={withCloseButton}
       >
-        <DialogHeader>
-          <DialogTitle className='text-3xl font-bold'>{title}</DialogTitle>
-          <DialogDescription asChild className='text-primary -mt-1 text-base'>
-            <div>{desc}</div>
-          </DialogDescription>
-          {(title || desc) && <Separator className='-mt-1 border' />}
+        <DialogHeader className="mb-4 text-left shrink-0">
+          {title && <DialogTitle className='text-2xl sm:text-3xl font-bold text-white'>{title}</DialogTitle>}
+          {desc && (
+            <DialogDescription asChild className='text-white/70 mt-1 text-sm sm:text-base'>
+              <div>{desc}</div>
+            </DialogDescription>
+          )}
+          {(title || desc) && <Separator className='mt-3 border-white/10' />}
         </DialogHeader>
+
         <ScrollArea
+          data-lenis-prevent
+          className="flex-1 min-h-0 w-full"
           style={{
-            maxHeight: screenHeight - 200,
+            maxHeight: screenHeight > 300 ? screenHeight - 240 : '65vh',
           }}
         >
-          <div className={`${title || desc ? 'my-2' : 'mt-0'}`}>{children}</div>
+          <div data-lenis-prevent className={`${title || desc ? 'my-2' : 'mt-0'} pr-3`}>
+            {children}
+          </div>
         </ScrollArea>
-        {footer && <div className='mt-4'>{footer}</div>}
+
+        {footer && <div className='mt-4 pt-3 border-t border-white/10 shrink-0'>{footer}</div>}
       </DialogContent>
     </Dialog>
   );
