@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import ContactForm from "@/modules/Contact/components/ContactForm";
-import Circles from "@/components/layout/Circles";
 import { fadeIn } from "@/utils/variants";
 import { Mail, MapPin } from "lucide-react";
 import Link from "next/link";
@@ -10,7 +9,6 @@ import Link from "next/link";
 const Contact = () => {
   return (
     <div className="min-h-screen bg-primary/30 pt-28 pb-36 md:pb-44 flex items-center relative overflow-hidden">
-      <Circles />
       <div className="container mx-auto px-6 md:px-16 xl:px-0">
         <div className="flex flex-col items-center justify-center">
           {/* Title */}

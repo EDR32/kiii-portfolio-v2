@@ -2,14 +2,11 @@
 
 import { motion } from "framer-motion";
 import WorkSlider from "@/modules/Work/components/WorkSlider";
-import Bulb from "@/components/layout/Bulb";
-import Circles from "@/components/layout/Circles";
 import { fadeIn } from "@/utils/variants";
 
 const Work = () => {
   return (
     <div className="min-h-screen bg-primary/30 py-36 flex items-center relative overflow-hidden">
-      <Circles />
       <div className="container mx-auto px-6 md:px-16 xl:px-0">
         <div className="flex flex-col xl:flex-row gap-x-8">
           {/* Text */}
@@ -48,7 +45,6 @@ const Work = () => {
           </motion.div>
         </div>
       </div>
-      <Bulb />
     </div>
   );
 };
