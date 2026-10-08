@@ -14,7 +14,7 @@ const Home = () => {
         <div className="text-center flex flex-col justify-center xl:pt-28 xl:text-left h-full container mx-auto px-6 md:px-16 xl:px-0">
           {/* Intro & Title */}
           <motion.div variants={fadeIn("down", 0.2)} initial="hidden" animate="show" exit="hidden">
-            <div className="inline-block px-3.5 py-1 mb-4 rounded-full bg-accent/15 border border-accent/30 text-accent text-xs md:text-sm font-medium tracking-wider uppercase">
+            <div className="inline-block px-3.5 py-1 mb-4 rounded-full bg-accent/15 border border-accent/30 text-accent text-sm md:text-sm font-medium tracking-wider uppercase">
               Hi, I&apos;m Eki Dama Rukmana — Frontend Developer
             </div>
             <h1 className="h1 text-3xl md:text-5xl xl:text-6xl font-bold mb-6">

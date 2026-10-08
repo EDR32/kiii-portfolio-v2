@@ -2,23 +2,21 @@
 
 import { motion } from "framer-motion";
 import ContactForm from "@/modules/Contact/components/ContactForm";
-import Circles from "@/components/layout/Circles";
 import { fadeIn } from "@/utils/variants";
 import { Mail, MapPin } from "lucide-react";
 import Link from "next/link";
 
 const Contact = () => {
   return (
-    <div className="min-h-screen bg-primary/30 py-32 flex items-center relative overflow-hidden">
-      <Circles />
+    <div className="min-h-screen bg-primary/30 pt-28 pb-36 md:pb-44 flex items-center relative overflow-hidden">
       <div className="container mx-auto px-6 md:px-16 xl:px-0">
         <div className="flex flex-col items-center justify-center">
           {/* Title */}
           <motion.h2
             variants={fadeIn("up", 0.2)}
             initial="hidden"
-            animate="show"
-            exit="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.2 }}
             className="h2 text-center text-3xl md:text-5xl font-bold mb-4"
           >
             Let&apos;s <span className="text-accent">connect.</span>
@@ -28,9 +26,9 @@ const Contact = () => {
           <motion.div
             variants={fadeIn("up", 0.3)}
             initial="hidden"
-            animate="show"
-            exit="hidden"
-            className="flex flex-wrap justify-center gap-3 md:gap-6 mb-8 text-xs md:text-sm text-white/80"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.2 }}
+            className="flex flex-wrap justify-center gap-3 md:gap-6 mb-8 text-sm md:text-sm text-white/80"
           >
             {/* <a
               href="mailto:ekidama91@gmail.com"
@@ -67,8 +65,8 @@ const Contact = () => {
           <motion.div
             variants={fadeIn("up", 0.4)}
             initial="hidden"
-            animate="show"
-            exit="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.2 }}
             className="w-full max-w-175 mx-auto"
           >
             <ContactForm />

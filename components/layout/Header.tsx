@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import Socials from "@/components/socials/Socials";
+import Socials from "@/components/layout/Socials";
 
 const Header = () => {
   return (

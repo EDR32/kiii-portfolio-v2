@@ -1,5 +1,5 @@
 import React from "react";
-import { Code2, Globe, Layers, Zap, Monitor } from "lucide-react";
+import { Code2, Globe, Layers, Zap, Monitor, Wrench } from "lucide-react";
 import { ServiceItem } from "../@types/type";
 
 export const serviceData: ServiceItem[] = [
@@ -32,5 +32,11 @@ export const serviceData: ServiceItem[] = [
     title: "Network & Infrastructure",
     description:
       "Konfigurasi router, switch, access point, rancang topologi jaringan lokal, serta pemeliharaan hardware/software.",
+  },
+  {
+    icon: <Wrench size={36} />,
+    title: "IT Support & Maintenance",
+    description:
+      "Troubleshooting hardware & software, penanganan kendala teknis, Quality Control (QC) aplikasi, dan pemeliharaan sistem.",
   },
 ];

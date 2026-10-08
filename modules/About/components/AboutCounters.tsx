@@ -8,7 +8,7 @@ const AboutCounters = () => {
         <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
           <CountUp start={0} end={3.71} decimals={2} duration={3} />
         </div>
-        <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-25">
+        <div className="text-sm uppercase tracking-[1px] leading-[1.4] max-w-25">
           IPK / GPA (Scale 4.0)
         </div>
       </div>
@@ -18,7 +18,7 @@ const AboutCounters = () => {
         <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
           <CountUp start={0} end={4} duration={3} /> +
         </div>
-        <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-25">
+        <div className="text-sm uppercase tracking-[1px] leading-[1.4] max-w-25">
           Years Tech Journey
         </div>
       </div>
@@ -28,7 +28,7 @@ const AboutCounters = () => {
         <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
           <CountUp start={0} end={15} duration={3} /> +
         </div>
-        <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-25">
+        <div className="text-sm uppercase tracking-[1px] leading-[1.4] max-w-25">
           Projects & Repos
         </div>
       </div>
@@ -38,7 +38,7 @@ const AboutCounters = () => {
         <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
           <CountUp start={0} end={2} duration={3} /> +
         </div>
-        <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-25">
+        <div className="text-sm uppercase tracking-[1px] leading-[1.4] max-w-25">
           Certified Credentials
         </div>
       </div>
