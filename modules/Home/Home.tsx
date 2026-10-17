@@ -8,17 +8,26 @@ import { fadeIn } from "@/utils/variants";
 
 const Home = () => {
   return (
-    <div className="bg-primary/60 min-h-screen relative flex flex-col justify-center">
+    <div className="min-h-[calc(100vh-4.5rem)] relative flex flex-col justify-center overflow-hidden">
+      {/* White Radial Glow behind Hero in Dark Mode */}
+      <div
+        className="hidden dark:block absolute top-1/4 left-1/4 -translate-x-1/2 w-200 max-w-full h-125 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.18)_0%,rgba(255,255,255,0.04)_50%,transparent_70%)] pointer-events-none -z-10 blur-2xl"
+        aria-hidden="true"
+      />
+
       {/* Text Container */}
-      <div className="w-full h-full bg-linear-to-r from-primary/10 via-black/30 to-black/10 py-24 xl:py-0">
-        <div className="text-center flex flex-col justify-center xl:pt-28 xl:text-left h-full container mx-auto px-6 md:px-16 xl:px-0">
+      <div className="w-full h-full py-20 xl:py-0 relative z-10">
+        <div className="text-center flex flex-col justify-center xl:pt-20 xl:text-left h-full container mx-auto px-6 md:px-16 xl:px-0">
           {/* Intro & Title */}
           <motion.div variants={fadeIn("down", 0.2)} initial="hidden" animate="show" exit="hidden">
-            <div className="inline-block px-3.5 py-1 mb-4 rounded-full bg-accent/15 border border-accent/30 text-accent text-sm md:text-sm font-medium tracking-wider uppercase">
+            <div className="inline-block px-4 py-1.5 mb-4 rounded-full bg-accent/20 dark:bg-accent/15 border border-accent/50 text-zinc-900 dark:text-accent text-xs md:text-sm font-bold tracking-wider uppercase shadow-xs">
               Hi, I&apos;m Eki Dama Rukmana — Frontend Developer
             </div>
-            <h1 className="h1 text-3xl md:text-5xl xl:text-6xl font-bold mb-6">
-              Transforming Ideas <br /> Into <span className="text-accent">Digital Reality</span>
+            <h1 className="h1 text-3xl md:text-5xl xl:text-6xl font-extrabold mb-6 text-zinc-900 dark:text-white">
+              Transforming Ideas <br /> Into{" "}
+              <span className="text-accent-darker dark:text-accent dark:drop-shadow-[0_0_25px_rgba(255,221,51,0.35)]">
+                Digital Reality
+              </span>
             </h1>
           </motion.div>
 
@@ -28,7 +37,7 @@ const Home = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16 text-white/70 text-sm md:text-base leading-relaxed"
+            className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16 text-zinc-600 dark:text-white/75 text-sm md:text-base leading-relaxed"
           >
             Frontend Developer lulusan S1 Teknik Informatika (IPK 3.71) yang berdedikasi membangun
             aplikasi web modern, responsif, dan berperforma tinggi. Berpengalaman dengan React,
@@ -55,8 +64,8 @@ const Home = () => {
 
       {/* Image & Particles Container */}
       <div className="w-full xl:w-300 h-full absolute right-0 bottom-0 pointer-events-none overflow-hidden">
-        {/* Background Explosion Image */}
-        <div className="bg-none xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge translate-z-0" />
+        {/* Background Explosion Image (dark mode only) */}
+        <div className="hidden dark:block bg-none xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge translate-z-0 opacity-40" />
 
         {/* Particles */}
         <ParticlesContainer />

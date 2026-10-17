@@ -1,4 +1,4 @@
-export const github = process.env.GITHUB;
-export const email = process.env.EMAIL_ME;
-export const linkedin = process.env.LINKED_IN;
-export const instagram = process.env.INSTAGRAM;
+export const github = process.env.NEXT_PUBLIC_GITHUB || process.env.GITHUB || "https://github.com/EDR32";
+export const email = process.env.NEXT_PUBLIC_EMAIL_ME || process.env.EMAIL_ME || "https://mail.google.com/mail/?view=cm&fs=1&to=ekidama91@gmail.com&su=Hire%20Me&body=Halo,%20saya%20tertarik%20untuk%20bekerja%20sama%20dengan%20anda.";
+export const linkedin = process.env.NEXT_PUBLIC_LINKED_IN || process.env.LINKED_IN || "https://www.linkedin.com/in/eki-dama-rukmana-169280388/";
+export const instagram = process.env.NEXT_PUBLIC_INSTAGRAM || process.env.INSTAGRAM || "https://www.instagram.com/kiii.dama/";

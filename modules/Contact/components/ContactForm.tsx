@@ -107,14 +107,14 @@ const ContactForm = () => {
 
       {/* Feedback Message */}
       {status === "success" && (
-        <div className="flex items-center gap-x-2 text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 px-4 py-3 rounded-lg text-sm transition-all duration-300">
+        <div className="flex items-center gap-x-2 text-emerald-700 dark:text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 px-4 py-3 rounded-lg text-sm transition-all duration-300">
           <CheckCircle2 className="w-5 h-5 shrink-0" />
           <span>Pesan Anda berhasil dikirim! Saya akan segera membalasnya.</span>
         </div>
       )}
 
       {status === "error" && (
-        <div className="flex items-center gap-x-2 text-rose-400 bg-rose-500/10 border border-rose-500/30 px-4 py-3 rounded-lg text-sm transition-all duration-300">
+        <div className="flex items-center gap-x-2 text-rose-700 dark:text-rose-400 bg-rose-500/10 border border-rose-500/30 px-4 py-3 rounded-lg text-sm transition-all duration-300">
           <AlertCircle className="w-5 h-5 shrink-0" />
           <span>{errorMessage}</span>
         </div>
@@ -124,15 +124,15 @@ const ContactForm = () => {
       <button
         type="submit"
         disabled={isLoading || isSuccess}
-        className="btn rounded-full border border-white/50 max-w-40 p-2 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group relative cursor-pointer disabled:opacity-60"
+        className="btn rounded-full border border-black/20 dark:border-white/40 max-w-44 p-3 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent hover:bg-accent hover:text-black group relative cursor-pointer disabled:opacity-60 text-zinc-900 dark:text-white font-bold text-sm shadow-xs hover:shadow-[0_0_15px_rgba(255,221,51,0.3)]"
       >
         <span
-          className={`${isLoading || isSuccess ? "" : "group-hover:translate-y-[-120%] group-hover:opacity-0"} transition-all duration-500 font-semibold text-sm`}
+          className={`${isLoading || isSuccess ? "" : "group-hover:translate-y-[-120%] group-hover:opacity-0"} transition-all duration-500 font-bold text-sm`}
         >
           {isLoading ? "Sending..." : isSuccess ? "Sent!" : "Let's talk"}
         </span>
         {!isLoading && !isSuccess && (
-          <ArrowRight className="translate-y-[-120%] opacity-0 group-hover:flex group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 absolute text-[22px] text-accent" />
+          <ArrowRight className="translate-y-[-120%] opacity-0 group-hover:flex group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 absolute text-[22px] text-black stroke-[2.5]" />
         )}
       </button>
     </form>

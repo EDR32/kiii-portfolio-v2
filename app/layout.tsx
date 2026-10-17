@@ -3,11 +3,12 @@ import { Sora, Poppins, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Layout from "@/components/layout/Layout";
 import SmoothScrollProvider from "@/components/providers/SmoothScroll";
+import ThemeProvider from "@/components/providers/ThemeProvider";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { cn } from "@/lib/utils";
 
-const jetbrainsMono = JetBrains_Mono({subsets:['latin'],variable:'--font-mono'});
+const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono" });
 
 const sora = Sora({
   subsets: ["latin"],
@@ -43,13 +44,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn("dark", jetbrainsMono.variable)}>
+    <html lang="en" suppressHydrationWarning className={cn(jetbrainsMono.variable)}>
       <body
-        className={`${sora.variable} ${poppins.variable} font-sora bg-primary text-white antialiased selection:bg-accent selection:text-white`}
+        className={`${sora.variable} ${poppins.variable} font-seed bg-background text-foreground antialiased selection:bg-accent selection:text-black`}
       >
-        <SmoothScrollProvider>
-          <Layout>{children}</Layout>
-        </SmoothScrollProvider>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
+          <SmoothScrollProvider>
+            <Layout>{children}</Layout>
+          </SmoothScrollProvider>
+        </ThemeProvider>
         <Analytics />
         <SpeedInsights />
       </body>

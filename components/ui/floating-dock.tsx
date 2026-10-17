@@ -46,7 +46,9 @@ const handleSmoothScroll = (
     e.preventDefault();
     const target = document.querySelector(href);
     if (target) {
-      const lenis = (window as unknown as { __lenis?: { scrollTo: (el: Element, opts?: object) => void } }).__lenis;
+      const lenis = (
+        window as unknown as { __lenis?: { scrollTo: (el: Element, opts?: object) => void } }
+      ).__lenis;
       if (lenis) {
         lenis.scrollTo(target, { offset: 0, duration: 1.2 });
       } else {
@@ -102,10 +104,10 @@ const FloatingDockMobile = ({
                     href={item.href}
                     onClick={(e) => handleSmoothScroll(e, item.href, () => setOpen(false))}
                     className={cn(
-                      "flex h-11 w-11 items-center justify-center rounded-full bg-neutral-900/90 border backdrop-blur-md shadow-lg transition-all",
+                      "flex h-11 w-11 items-center justify-center rounded-full bg-white/90 dark:bg-neutral-900/90 border backdrop-blur-md shadow-lg transition-all",
                       isActive
-                        ? "border-accent text-accent shadow-[0_0_12px_rgba(241,48,36,0.35)]"
-                        : "border-white/15 text-white/80 hover:text-accent hover:border-accent"
+                        ? "border-accent text-black dark:text-accent bg-accent/20 shadow-[0_0_12px_rgba(255,221,51,0.35)]"
+                        : "border-black/10 dark:border-white/15 text-zinc-700 dark:text-white/80 hover:text-black dark:hover:text-accent hover:border-accent",
                     )}
                   >
                     <div className="h-5 w-5 flex items-center justify-center">{item.icon}</div>
@@ -118,7 +120,7 @@ const FloatingDockMobile = ({
       </AnimatePresence>
       <button
         onClick={() => setOpen(!open)}
-        className="flex h-12 w-12 items-center justify-center rounded-full bg-neutral-900/90 border border-white/20 backdrop-blur-md shadow-xl text-white hover:text-accent hover:border-accent transition-colors"
+        className="flex h-12 w-12 items-center justify-center rounded-full bg-white/90 dark:bg-neutral-900/90 border border-black/10 dark:border-white/20 backdrop-blur-md shadow-xl text-zinc-800 dark:text-white hover:text-black dark:hover:text-accent hover:border-accent transition-colors cursor-pointer"
         aria-label="Toggle navigation"
       >
         <IconLayoutNavbarCollapse className="h-6 w-6" />
@@ -142,7 +144,7 @@ const FloatingDockDesktop = ({
       onMouseMove={(e) => mouseX.set(e.pageX)}
       onMouseLeave={() => mouseX.set(Infinity)}
       className={cn(
-        "mx-auto hidden h-16 items-end gap-3.5 rounded-2xl bg-neutral-950/85 border border-white/15 backdrop-blur-xl px-3.5 pb-2.5 shadow-2xl md:flex transform-gpu",
+        "mx-auto hidden h-16 items-end gap-3.5 rounded-2xl bg-white/85 dark:bg-neutral-950/85 border border-black/10 dark:border-white/15 backdrop-blur-xl px-3.5 pb-2.5 shadow-xl shadow-zinc-300/30 dark:shadow-2xl md:flex transform-gpu",
         className,
       )}
     >
@@ -222,10 +224,10 @@ function IconContainer({
         }}
         onMouseLeave={() => setHovered(false)}
         className={cn(
-          "relative flex aspect-square items-center justify-center rounded-full bg-neutral-900/90 border transition-colors duration-150 group transform-gpu will-change-[width,height]",
+          "relative flex aspect-square items-center justify-center rounded-full bg-zinc-100/90 dark:bg-neutral-900/90 border transition-colors duration-150 group transform-gpu will-change-[width,height]",
           isActive
-            ? "border-accent text-accent shadow-[0_0_14px_rgba(241,48,36,0.35)]"
-            : "border-white/10 text-neutral-300 hover:text-white hover:border-accent/60"
+            ? "border-accent text-black dark:text-accent bg-accent/25 dark:bg-neutral-900 shadow-[0_0_14px_rgba(255,221,51,0.35)]"
+            : "border-black/5 dark:border-white/10 text-zinc-600 dark:text-neutral-300 hover:text-black dark:hover:text-white hover:border-accent/60",
         )}
       >
         <AnimatePresence>
@@ -234,7 +236,7 @@ function IconContainer({
               initial={{ opacity: 0, y: 10, x: "-50%" }}
               animate={{ opacity: 1, y: 0, x: "-50%" }}
               exit={{ opacity: 0, y: 2, x: "-50%" }}
-              className="absolute -top-9 left-1/2 w-fit rounded-lg border border-white/15 bg-neutral-950/95 px-2.5 py-1 text-xs whitespace-pre font-medium text-white shadow-xl backdrop-blur-md pointer-events-none"
+              className="absolute -top-9 left-1/2 w-fit rounded-lg border border-black/10 dark:border-white/15 bg-white/95 dark:bg-neutral-950/95 px-2.5 py-1 text-xs whitespace-pre font-medium text-zinc-900 dark:text-white shadow-xl backdrop-blur-md pointer-events-none"
             >
               {title}
             </motion.div>
@@ -246,9 +248,7 @@ function IconContainer({
         >
           {icon}
         </motion.div>
-        {isActive && (
-          <span className="w-1.5 h-1.5 rounded-full bg-accent absolute bottom-1" />
-        )}
+        {isActive && <span className="w-1.5 h-1.5 rounded-full bg-accent absolute bottom-1" />}
       </motion.div>
     </a>
   );

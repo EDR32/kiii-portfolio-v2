@@ -7,17 +7,19 @@ import { fadeIn } from "@/utils/variants";
 import { aboutData } from "@/modules/About/utils/constants";
 import dynamic from "next/dynamic";
 
-const GithubActivity = dynamic(
-  () => import("@/components/github/GithubCalendar"),
-  { ssr: false }
-);
+const GithubActivity = dynamic(() => import("@/components/github/GithubCalendar"), { ssr: false });
 
 const About = () => {
   const skillsCategory = aboutData.find((cat) => cat.title === "skills");
 
   return (
-    <div className="min-h-screen bg-primary/30 py-24 xl:py-32 text-center xl:text-left relative flex flex-col justify-center overflow-hidden">
-      <div className="container mx-auto h-full flex flex-col justify-center gap-y-16 px-6 md:px-16 xl:px-0 relative z-10">
+    <div className="py-14 md:py-18 xl:py-22 text-center xl:text-left relative flex flex-col justify-center overflow-hidden">
+      <div
+        className="hidden dark:block absolute top-12 left-1/3 -translate-x-1/2 w-212.5 max-w-full h-125 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.18)_0%,rgba(255,255,255,0.04)_45%,transparent_70%)] pointer-events-none -z-10 blur-2xl"
+        aria-hidden="true"
+      />
+
+      <div className="container mx-auto h-full flex flex-col justify-center gap-y-12 md:gap-y-14 px-6 md:px-16 xl:px-0 relative z-10">
         {/* Top: Left Column (Bio & Counters) & Right Column (Skills Overview) */}
         <div className="w-full flex flex-col items-center xl:flex-row gap-x-12 gap-y-10">
           {/* Left Column: Text & Counters */}
@@ -27,9 +29,11 @@ const About = () => {
               initial="hidden"
               whileInView="show"
               viewport={{ once: true, amount: 0.2 }}
-              className="h2 text-3xl md:text-5xl font-bold leading-tight"
+              className="h2 text-3xl md:text-5xl font-bold leading-tight text-zinc-900 dark:text-white"
             >
-              Crafting <span className="text-accent">modern interfaces</span> with engineering precision.
+              Crafting{" "}
+              <span className="text-accent-darker dark:text-accent">modern interfaces</span> with
+              engineering precision.
             </motion.h2>
 
             <motion.p
@@ -37,12 +41,12 @@ const About = () => {
               initial="hidden"
               whileInView="show"
               viewport={{ once: true, amount: 0.2 }}
-              className="max-w-125 mx-auto xl:mx-0 mb-6 xl:mb-10 px-2 xl:px-0 text-white/70 text-sm md:text-base leading-relaxed"
+              className="max-w-125 mx-auto xl:mx-0 mb-6 xl:mb-10 px-2 xl:px-0 text-zinc-600 dark:text-white/70 text-sm md:text-base leading-relaxed"
             >
-              Lulusan S1 Teknik Informatika STTIKOM Insan Unggul (IPK 3.71) dengan passion
-              tinggi di bidang Frontend Development dan teknologi web. Berpengalaman
-              membangun antarmuka sistem e-Government seperti portal monitoring CCTV real-time
-              di Diskominfo Kota Serang serta aplikasi antarmuka modern dengan React, Next.js, dan TypeScript.
+              Lulusan S1 Teknik Informatika STTIKOM Insan Unggul (IPK 3.71) dengan passion tinggi di
+              bidang Frontend Development dan teknologi web. Berpengalaman membangun antarmuka
+              sistem e-Government seperti portal monitoring CCTV real-time di Diskominfo Kota Serang
+              serta aplikasi antarmuka modern dengan React, Next.js, dan TypeScript.
             </motion.p>
 
             {/* Counters */}
@@ -68,29 +72,37 @@ const About = () => {
             {skillsCategory?.info.map((skillGroup, groupIdx) => (
               <div
                 key={groupIdx}
-                className="w-full flex flex-col items-center xl:items-start text-white/70 bg-[rgba(65,47,123,0.15)] hover:bg-[rgba(89,65,169,0.22)] border border-white/10 hover:border-accent/40 transition-all duration-300 p-5 rounded-2xl shadow-lg shadow-black/20"
+                className="relative overflow-hidden w-full flex flex-col items-center xl:items-start bg-white dark:bg-[#121215]/95 backdrop-blur-xl border border-black/10 dark:border-white/15 hover:border-black/20 dark:hover:border-white/30 transition-all duration-300 p-5 rounded-2xl shadow-sm dark:shadow-[0_12px_24px_-6px_rgba(255,255,255,0.08)] group"
               >
-                <div className="w-full flex flex-col sm:flex-row justify-between items-center sm:items-baseline gap-2 mb-1.5">
-                  <div className="font-semibold text-white text-base md:text-lg">
+                {/* Bottom glowing beam line */}
+                <div className="hidden dark:block absolute bottom-0 inset-x-4 h-[1.5px] bg-linear-to-r from-transparent via-white/80 to-transparent shadow-[0_0_10px_rgba(255,255,255,0.8)] pointer-events-none" />
+                <div className="hidden dark:block absolute inset-x-0 bottom-0 h-16 bg-linear-to-t from-white/10 via-white/2 to-transparent pointer-events-none" />
+
+                <div className="w-full flex flex-col sm:flex-row justify-between items-center sm:items-baseline gap-2 mb-1.5 relative z-10">
+                  <div className="font-bold text-zinc-900 dark:text-white text-base md:text-lg">
                     {skillGroup.title}
                   </div>
-                  <span className="text-sm text-accent bg-accent/10 border border-accent/20 px-2.5 py-0.5 rounded-full font-medium">
-                    {groupIdx === 0 ? "Core Focus" : groupIdx === 1 ? "Web Systems" : "Infrastructure"}
+                  <span className="text-xs text-black dark:text-accent bg-accent/25 dark:bg-accent/15 border border-accent/40 px-2.5 py-0.5 rounded-full font-bold">
+                    {groupIdx === 0
+                      ? "Core Focus"
+                      : groupIdx === 1
+                        ? "Web Systems"
+                        : "Infrastructure"}
                   </span>
                 </div>
 
                 {skillGroup.subtitle && (
-                  <div className="text-sm md:text-sm text-white/60 mb-3 font-normal text-center xl:text-left">
+                  <div className="text-xs md:text-sm text-zinc-500 dark:text-white/60 mb-3 font-normal text-center xl:text-left">
                     {skillGroup.subtitle}
                   </div>
                 )}
 
                 {skillGroup.icons && (
-                  <div className="flex flex-wrap justify-center xl:justify-start gap-4 text-2xl text-white/80">
+                  <div className="flex flex-wrap justify-center xl:justify-start gap-4 text-2xl text-zinc-700 dark:text-white/80">
                     {skillGroup.icons.map((icon, iconIndex) => (
                       <div
                         key={iconIndex}
-                        className="hover:text-accent hover:scale-110 transition-all duration-200 cursor-pointer"
+                        className="hover:text-black dark:hover:text-accent hover:scale-110 transition-all duration-200 cursor-pointer"
                       >
                         {icon}
                       </div>
@@ -111,11 +123,13 @@ const About = () => {
           className="w-full pt-4"
         >
           <div className="text-center xl:text-left mb-6">
-            <h3 className="h3 text-2xl md:text-4xl font-bold text-white mb-2">
-              Career &amp; Academic <span className="text-accent">Journey</span>
+            <h3 className="h3 text-2xl md:text-4xl font-bold text-zinc-900 dark:text-white mb-2">
+              Career &amp; Academic{" "}
+              <span className="text-accent-darker dark:text-accent">Journey</span>
             </h3>
-            <p className="text-sm md:text-base text-white/60 max-w-xl mx-auto xl:mx-0">
-              Perjalanan profesional, riwayat pendidikan formal, dan kredensial kompetensi terstandarisasi.
+            <p className="text-sm md:text-base text-zinc-600 dark:text-white/60 max-w-xl mx-auto xl:mx-0">
+              Perjalanan profesional, riwayat pendidikan formal, dan kredensial kompetensi
+              terstandarisasi.
             </p>
           </div>
           <AboutTimeline />
