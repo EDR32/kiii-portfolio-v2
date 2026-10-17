@@ -1,19 +1,29 @@
 import React from "react";
-import { GitBranch, Mail, Share2, Camera } from "lucide-react";
+import { RiGithubLine, RiLinkedinLine, RiInstagramLine, RiMailLine } from "react-icons/ri";
 import { SocialItem } from "@/types";
 import { github, email, linkedin, instagram } from "@/constants/env";
 
 export const socialLinks: SocialItem[] = [
-  { name: "GitHub", url: github || "#", icon: <GitBranch size={20} /> },
   {
-    name: "Email",
-    url: email || "",
-    icon: <Mail size={20} />,
+    name: "GitHub",
+    url: github || "https://github.com/EDR32",
+    icon: <RiGithubLine size={20} />,
   },
   {
     name: "LinkedIn",
-    url: linkedin || "",
-    icon: <Share2 size={20} />,
+    url: linkedin || "https://www.linkedin.com/in/eki-dama-rukmana-169280388/",
+    icon: <RiLinkedinLine size={20} />,
   },
-  { name: "Instagram", url: instagram || "", icon: <Camera size={20} /> },
+  {
+    name: "Instagram",
+    url: instagram || "https://www.instagram.com/kiii.dama/",
+    icon: <RiInstagramLine size={20} />,
+  },
+  {
+    name: "Email",
+    url:
+      email ||
+      "https://mail.google.com/mail/?view=cm&fs=1&to=ekidama91@gmail.com&su=Hire%20Me&body=Halo,%20saya%20tertarik%20untuk%20bekerja%20sama%20dengan%20anda.",
+    icon: <RiMailLine size={20} />,
+  },
 ];

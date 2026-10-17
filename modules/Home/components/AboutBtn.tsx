@@ -23,16 +23,15 @@ const AboutBtn = () => {
       <a
         href="#about"
         onClick={handleClick}
-        className="relative w-46.25 h-46.25 flex justify-center items-center bg-circleStar bg-cover bg-center bg-no-repeat group cursor-pointer"
+        className="relative w-46.25 h-46.25 flex justify-center items-center bg-circleStar bg-cover bg-center bg-no-repeat group cursor-pointer dark:invert-0 invert transition-all duration-300"
         aria-label="View About"
       >
         <Image
           src="/about-me.png"
           width={141}
-          height={148}
+          height={141}
           alt="About Me"
-          className="animate-spin-slow w-full h-full max-w-35.25 max-h-35.25"
-          style={{ width: "auto", height: "auto" }}
+          className="animate-spin-slow w-35.25 h-35.25 object-contain"
         />
         <ArrowRight className="absolute text-4xl w-9 h-9 group-hover:translate-x-2 transition-all duration-300 text-white" />
       </a>
