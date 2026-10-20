@@ -3,8 +3,8 @@
 import { motion } from "framer-motion";
 import ContactForm from "@/modules/Contact/components/ContactForm";
 import { fadeIn } from "@/utils/variants";
-import { Mail, MapPin } from "lucide-react";
-import Link from "next/link";
+// import { Mail, MapPin } from "lucide-react";
+// import Link from "next/link";
 
 const Contact = () => {
   return (
@@ -25,7 +25,7 @@ const Contact = () => {
             viewport={{ once: true, amount: 0.2 }}
             className="h2 text-center text-3xl md:text-5xl font-bold mb-4 text-zinc-900 dark:text-white"
           >
-            Let&apos;s <span className="text-accent-darker dark:text-accent">connect.</span>
+            Let&apos;s <span className="text-accent-darker dark:text-accent">Connect</span>
           </motion.h2>
 
           {/* Quick Contact Info */}
@@ -36,7 +36,7 @@ const Contact = () => {
             viewport={{ once: true, amount: 0.2 }}
             className="flex flex-wrap justify-center gap-3 md:gap-6 mb-8 text-sm"
           >
-            <Link
+            {/* <Link
               key="Email"
               href="https://mail.google.com/mail/?view=cm&fs=1&to=ekidama91@gmail.com&su=Hire%20Me&body=Halo,%20saya%20tertarik%20untuk%20bekerja%20sama%20dengan%20anda."
               target="_blank"
@@ -57,7 +57,7 @@ const Contact = () => {
             >
               <MapPin className="text-accent-darker dark:text-accent text-base md:text-lg w-4 h-4 md:w-5 md:h-5 stroke-[2.2]" />
               <span>My Address</span>
-            </Link>
+            </Link> */}
           </motion.div>
 
           <ContactForm />

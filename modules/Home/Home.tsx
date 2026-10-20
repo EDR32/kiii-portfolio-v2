@@ -39,9 +39,9 @@ const Home = () => {
             exit="hidden"
             className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16 text-zinc-600 dark:text-white/75 text-sm md:text-base leading-relaxed"
           >
-            Frontend Developer lulusan S1 Teknik Informatika (IPK 3.71) yang berdedikasi membangun
-            aplikasi web modern, responsif, dan berperforma tinggi. Berpengalaman dengan React,
-            Next.js, TypeScript, dan implementasi sistem informasi publik.
+            Frontend Developer lulusan S1 Teknik Informatika yang berdedikasi membangun
+            aplikasi web modern, responsif dan berperforma tinggi. Berpengalaman dengan React,
+            Next.js, TypeScript dan implementasi sistem informasi publik.
           </motion.p>
 
           {/* Button on Mobile */}

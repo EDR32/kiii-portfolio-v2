@@ -27,7 +27,7 @@ const Footer = () => {
               />
             </Link>
             <p className="text-xs sm:text-sm text-zinc-500 dark:text-white/60 max-w-sm">
-              Frontend Developer specializing in modern web interfaces, React, Next.js, and TypeScript.
+              Frontend Developer specializing in modern web interfaces, React, Next.js and TypeScript.
             </p>
           </div>
 

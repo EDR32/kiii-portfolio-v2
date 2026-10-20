@@ -24,7 +24,7 @@ const Services = () => {
               viewport={{ once: true, amount: 0.2 }}
               className="h2 text-3xl md:text-5xl font-bold mb-4 text-zinc-900 dark:text-white"
             >
-              My services <span className="text-accent-darker dark:text-accent">.</span>
+              My <span className="text-accent-darker dark:text-accent">Services </span>
             </motion.h2>
             <motion.p
               variants={fadeIn("up", 0.4)}
@@ -34,7 +34,7 @@ const Services = () => {
               className="max-w-2xl mx-auto text-zinc-600 dark:text-white/70 text-sm md:text-base leading-relaxed"
             >
               Layanan terintegrasi mulai dari pengembangan antarmuka web modern (React, Next.js,
-              TypeScript), implementasi platform digital &amp; e-Government, hingga arsitektur
+              TypeScript), implementasi platform digital, hingga arsitektur
               sistem dan infrastruktur jaringan komputer.
             </motion.p>
           </div>
