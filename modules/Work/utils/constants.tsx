@@ -34,7 +34,6 @@ export const projectsData: ProjectItem[] = [
     images: [
       "/crm/crm-news-stats.jpeg",
       "/crm/crm-detail-ticket.jpeg",
-      "/crm/crm-contractpks.jpeg",
       "/crm/crm-proposalsph.jpeg",
       "/crm/crm-articles-library.jpeg",
       "/crm/crm-news-library.jpeg",
@@ -109,7 +108,7 @@ export const projectsData: ProjectItem[] = [
     images: [
       "/nuha-klinik/klinik-laporan.png",
       "/nuha-klinik/klinik-kas.png",
-      "/nuha-klinik/klinik-detail-permintaan.png",
+      "/nuha-klinik/klinik-detail-permintaan-resep.jpeg",
     ],
     shortDesc:
       "Sistem informasi manajemen klinik kesehatan untuk monitoring arus kas keuangan, pelaporan rekapitulasi operasional medis dan tracking logistik permintaan obat.",
