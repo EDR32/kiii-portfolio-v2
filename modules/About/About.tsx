@@ -43,10 +43,10 @@ const About = () => {
               viewport={{ once: true, amount: 0.2 }}
               className="max-w-125 mx-auto xl:mx-0 mb-6 xl:mb-10 px-2 xl:px-0 text-zinc-600 dark:text-white/70 text-sm md:text-base leading-relaxed"
             >
-              Lulusan S1 Teknik Informatika STTIKOM Insan Unggul (IPK 3.71) dengan passion tinggi di
-              bidang Frontend Development dan teknologi web. Berpengalaman membangun antarmuka
-              sistem e-Government seperti portal monitoring CCTV real-time di Diskominfo Kota Serang
-              serta aplikasi antarmuka modern dengan React, Next.js, dan TypeScript.
+              Lulusan S1 Teknik Informatika STTIKOM Insan Unggul dengan passion tinggi di bidang web
+              development khusus nya Frontend. Berpengalaman membangun antarmuka seperti portal
+              monitoring CCTV, CRM Portal, Portofolio serta aplikasi antarmuka modern lainnya
+              berbasis HTML, CSS, React, Next.js, TypeScript, DLL.
             </motion.p>
 
             {/* Counters */}
@@ -120,16 +120,17 @@ const About = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.1 }}
-          className="w-full pt-4"
+          className="w-full pt-4 text-center"
         >
           <div className="text-center xl:text-left mb-6">
-            <h3 className="h3 text-2xl md:text-4xl font-bold text-zinc-900 dark:text-white mb-2">
-              Career &amp; Academic{" "}
-              <span className="text-accent-darker dark:text-accent">Journey</span>
+            <h3 className="h3 text-2xl md:text-4xl font-bold text-zinc-900 dark:text-white mb-2 text-center">
+              Career &amp;{" "}
+              <span className="text-accent-darker dark:text-accent text-center">
+                Academic Journey
+              </span>
             </h3>
-            <p className="text-sm md:text-base text-zinc-600 dark:text-white/60 max-w-xl mx-auto xl:mx-0">
-              Perjalanan profesional, riwayat pendidikan formal, dan kredensial kompetensi
-              terstandarisasi.
+            <p className="text-sm md:text-base text-center text-zinc-600 dark:text-white/60 max-w-xl mx-auto w-full">
+              Perjalanan, riwayat pendidikan, sertifikasi kompetensi dan pengalaman saya sampai saat ini.
             </p>
           </div>
           <AboutTimeline />

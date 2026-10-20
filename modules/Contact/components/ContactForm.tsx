@@ -65,7 +65,7 @@ const ContactForm = () => {
           name="name"
           value={formData.name}
           onChange={handleChange}
-          placeholder="Name"
+          placeholder="Masukkan Nama Lengkap"
           required
           disabled={isLoading}
           className="input"
@@ -75,7 +75,7 @@ const ContactForm = () => {
           name="email"
           value={formData.email}
           onChange={handleChange}
-          placeholder="Email"
+          placeholder="email-anda@email.com"
           required
           disabled={isLoading}
           className="input"
@@ -88,7 +88,7 @@ const ContactForm = () => {
         name="subject"
         value={formData.subject}
         onChange={handleChange}
-        placeholder="Subject"
+        placeholder="Masukkan Subject"
         required
         disabled={isLoading}
         className="input"
@@ -99,7 +99,7 @@ const ContactForm = () => {
         name="message"
         value={formData.message}
         onChange={handleChange}
-        placeholder="Message"
+        placeholder="Contoh: Saya ingin bekerja sama dengan anda"
         required
         disabled={isLoading}
         className="textarea"
@@ -129,7 +129,7 @@ const ContactForm = () => {
         <span
           className={`${isLoading || isSuccess ? "" : "group-hover:translate-y-[-120%] group-hover:opacity-0"} transition-all duration-500 font-bold text-sm`}
         >
-          {isLoading ? "Sending..." : isSuccess ? "Sent!" : "Let's talk"}
+          {isLoading ? "Mengirim..." : isSuccess ? "Terkirim!" : "Kirim Pesan"}
         </span>
         {!isLoading && !isSuccess && (
           <ArrowRight className="translate-y-[-120%] opacity-0 group-hover:flex group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 absolute text-[22px] text-black stroke-[2.5]" />

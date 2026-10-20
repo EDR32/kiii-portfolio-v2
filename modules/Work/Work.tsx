@@ -38,7 +38,7 @@ const Work = () => {
               viewport={{ once: true, amount: 0.2 }}
               className="h2 text-3xl md:text-5xl font-bold mb-4 text-zinc-900 dark:text-white"
             >
-              My work <span className="text-accent-darker dark:text-accent">.</span>
+              My <span className="text-accent-darker dark:text-accent">Work</span>
             </motion.h2>
             <motion.p
               variants={fadeIn("up", 0.4)}
@@ -47,9 +47,9 @@ const Work = () => {
               viewport={{ once: true, amount: 0.2 }}
               className="max-w-2xl mx-auto text-zinc-600 dark:text-white/70 text-sm md:text-base leading-relaxed"
             >
-              Kumpulan proyek pengembangan aplikasi web modern, platform enterprise CRM &amp; CMS,
-              sistem reservasi event &amp; tiket, sistem informasi manajemen klinik, serta portal
-              e-Government.
+              Kumpulan proyek pengembangan aplikasi web modern, mulai dari CRM Portal &amp; CMS,
+              sistem management fast tournament, sistem informasi manajemen klinik, serta portal
+              monitoring CCTV.
             </motion.p>
           </div>
 

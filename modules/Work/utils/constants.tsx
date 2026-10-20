@@ -112,7 +112,7 @@ export const projectsData: ProjectItem[] = [
       "/nuha-klinik/klinik-detail-permintaan.png",
     ],
     shortDesc:
-      "Sistem informasi manajemen klinik kesehatan untuk monitoring arus kas keuangan, pelaporan rekapitulasi operasional medis, dan tracking logistik permintaan obat.",
+      "Sistem informasi manajemen klinik kesehatan untuk monitoring arus kas keuangan, pelaporan rekapitulasi operasional medis dan tracking logistik permintaan obat.",
     fullDesc:
       "Sistem Informasi Manajemen (SIM) Klinik yang dikembangkan khusus untuk memodernisasi tata kelola operasional dan keuangan klinik Nuha. Sistem ini mengintegrasikan pencatatan kas masuk dan kas keluar harian, verifikasi permintaan kebutuhan logistik medis antar divisi, serta dashboard pelaporan keuangan berkala yang akurat untuk mendukung pengambilan keputusan manajemen.",
     features: [
