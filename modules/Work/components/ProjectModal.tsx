@@ -45,7 +45,7 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
       maxWidth="lg"
       footer={
         <div className="flex flex-wrap items-center justify-between gap-3 w-full">
-          <div className="flex items-center gap-2 text-xs text-zinc-500 dark:text-white/50">
+          <div className="flex items-center gap-2 text-sm text-zinc-500 dark:text-white/50">
             <span>{images.length} tangkapan layar tersedia</span>
           </div>
           <div className="flex items-center gap-3">
@@ -95,7 +95,7 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
           )}
 
           {images.length > 1 && (
-            <div className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/80 backdrop-blur-md px-3.5 py-1 rounded-full text-xs text-white border border-white/20 flex items-center gap-1.5 shadow-md">
+            <div className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/80 backdrop-blur-md px-3.5 py-1 rounded-full text-sm text-white border border-white/20 flex items-center gap-1.5 shadow-md">
               <span className="font-bold text-accent">{activeImageIndex + 1}</span>
               <span>/</span>
               <span>{images.length}</span>
@@ -142,7 +142,7 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
               {project.features.map((feature, idx) => (
                 <div
                   key={idx}
-                  className="flex items-start gap-2.5 bg-white dark:bg-[#202020] border border-black/10 dark:border-white/10 p-3 rounded-xl text-xs sm:text-sm text-zinc-800 dark:text-white/85 shadow-xs"
+                  className="flex items-start gap-2.5 bg-white dark:bg-[#202020] border border-black/10 dark:border-white/10 p-3 rounded-xl text-sm sm:text-sm text-zinc-800 dark:text-white/85 shadow-xs"
                 >
                   <span>{feature}</span>
                 </div>
@@ -161,7 +161,7 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
               {project.techStack.map((tech, idx) => (
                 <span
                   key={idx}
-                  className="bg-accent/20 dark:bg-accent/15 border border-accent/40 text-black dark:text-accent px-3.5 py-1 rounded-xl text-xs sm:text-sm font-bold shadow-xs"
+                  className="bg-accent/20 dark:bg-accent/15 border border-accent/40 text-black dark:text-accent px-3.5 py-1 rounded-xl text-sm sm:text-sm font-bold shadow-xs"
                 >
                   {tech}
                 </span>

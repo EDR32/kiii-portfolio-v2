@@ -12,7 +12,10 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ project, onOpenDetail }: ProjectCardProps) {
   return (
-    <div className="relative group/work-card h-full">
+    <div
+      onClick={() => onOpenDetail(project)}
+      className="relative group/work-card h-full cursor-pointer"
+    >
       {/* Cahaya putih di bawah card */}
       <div className="hidden dark:block absolute -bottom-3 inset-x-8 h-8 bg-white/20 blur-xl rounded-full pointer-events-none group-hover/work-card:bg-white/40 group-hover/work-card:h-10 transition-all duration-500" />
       <div className="hidden dark:block absolute -bottom-1 inset-x-14 h-4 bg-white/35 blur-md rounded-full pointer-events-none group-hover/work-card:bg-white/60 transition-all duration-500" />
@@ -32,7 +35,7 @@ export default function ProjectCard({ project, onOpenDetail }: ProjectCardProps)
             sizes="(max-width: 768px) 100vw, 50vw"
             className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
           />
-          <div className="absolute top-3 left-3 bg-white/90 dark:bg-black/80 backdrop-blur-md border border-black/10 dark:border-white/10 px-3 py-1 rounded-full text-xs text-zinc-900 dark:text-accent font-bold flex items-center gap-1.5 shadow-xs">
+          <div className="absolute top-3 left-3 bg-white/90 dark:bg-black/80 backdrop-blur-md border border-black/10 dark:border-white/10 px-3 py-1 rounded-full text-sm text-zinc-900 dark:text-accent font-bold flex items-center gap-1.5 shadow-xs">
             <Layers className="w-3.5 h-3.5" />
             <span>{project.category}</span>
           </div>

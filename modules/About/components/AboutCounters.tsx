@@ -8,7 +8,7 @@ const AboutCounters = () => {
         <div className="text-2xl xl:text-4xl font-extrabold text-accent-darker dark:text-accent mb-2">
           <CountUp start={0} end={3.71} decimals={2} duration={3} />
         </div>
-        <div className="text-xs sm:text-sm uppercase tracking-[1px] leading-[1.4] max-w-25 text-zinc-600 dark:text-zinc-300 font-medium">
+        <div className="text-sm sm:text-sm uppercase tracking-[1px] leading-[1.4] max-w-25 text-zinc-600 dark:text-zinc-300 font-medium">
           IPK / GPA (Scale 4.0)
         </div>
       </div>
@@ -18,7 +18,7 @@ const AboutCounters = () => {
         <div className="text-2xl xl:text-4xl font-extrabold text-accent-darker dark:text-accent mb-2">
           <CountUp start={0} end={4} duration={3} /> +
         </div>
-        <div className="text-xs sm:text-sm uppercase tracking-[1px] leading-[1.4] max-w-25 text-zinc-600 dark:text-zinc-300 font-medium">
+        <div className="text-sm sm:text-sm uppercase tracking-[1px] leading-[1.4] max-w-25 text-zinc-600 dark:text-zinc-300 font-medium">
           Years Tech Journey
         </div>
       </div>
@@ -28,7 +28,7 @@ const AboutCounters = () => {
         <div className="text-2xl xl:text-4xl font-extrabold text-accent-darker dark:text-accent mb-2">
           <CountUp start={0} end={15} duration={3} /> +
         </div>
-        <div className="text-xs sm:text-sm uppercase tracking-[1px] leading-[1.4] max-w-25 text-zinc-600 dark:text-zinc-300 font-medium">
+        <div className="text-sm sm:text-sm uppercase tracking-[1px] leading-[1.4] max-w-25 text-zinc-600 dark:text-zinc-300 font-medium">
           Projects & Repos
         </div>
       </div>
@@ -38,7 +38,7 @@ const AboutCounters = () => {
         <div className="text-2xl xl:text-4xl font-extrabold text-accent-darker dark:text-accent mb-2">
           <CountUp start={0} end={2} duration={3} /> +
         </div>
-        <div className="text-xs sm:text-sm uppercase tracking-[1px] leading-[1.4] max-w-25 text-zinc-600 dark:text-zinc-300 font-medium">
+        <div className="text-sm sm:text-sm uppercase tracking-[1px] leading-[1.4] max-w-25 text-zinc-600 dark:text-zinc-300 font-medium">
           Certified Credentials
         </div>
       </div>

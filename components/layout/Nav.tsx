@@ -25,9 +25,7 @@ const Nav = () => {
               {/* Tooltip */}
               <div className="absolute pr-14 right-0 hidden xl:group-hover:flex">
                 <div className="bg-white relative flex text-primary items-center p-1.5 rounded-[3px]">
-                  <div className="text-[12px] leading-none font-semibold capitalize">
-                    {link.name}
-                  </div>
+                  <div className="text-sm leading-none font-semibold capitalize">{link.name}</div>
                   {/* Triangle */}
                   <div className="border-solid border-l-white border-l-8 border-y-transparent border-y-[6px] border-r-0 absolute -right-2" />
                 </div>

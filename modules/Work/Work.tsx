@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import ProjectCard from "@/modules/Work/components/ProjectCard";
 import ProjectModal from "@/modules/Work/components/ProjectModal";
+import { FocusCard } from "@/components/ui/focus-cards";
 import { projectsData } from "@/modules/Work/utils/constants";
 import { ProjectItem } from "@/modules/Work/@types/type";
 import { fadeIn } from "@/utils/variants";
@@ -11,6 +12,7 @@ import { fadeIn } from "@/utils/variants";
 const Work = () => {
   const [selectedProject, setSelectedProject] = useState<ProjectItem | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [hovered, setHovered] = useState<number | null>(null);
 
   const handleOpenDetail = (project: ProjectItem) => {
     setSelectedProject(project);
@@ -48,7 +50,7 @@ const Work = () => {
               className="max-w-2xl mx-auto text-zinc-600 dark:text-white/70 text-sm md:text-base leading-relaxed"
             >
               Kumpulan proyek pengembangan aplikasi web modern, mulai dari CRM Portal &amp; CMS,
-              sistem management fast tournament, sistem informasi manajemen klinik, serta portal
+              sistem management fast tournament, sistem informasi manajemen klinik serta portal
               monitoring CCTV.
             </motion.p>
           </div>
@@ -60,8 +62,10 @@ const Work = () => {
             viewport={{ once: true, amount: 0.15 }}
             className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full mx-auto"
           >
-            {projectsData.map((project) => (
-              <ProjectCard key={project.id} project={project} onOpenDetail={handleOpenDetail} />
+            {projectsData.map((project, index) => (
+              <FocusCard key={project.id} index={index} hovered={hovered} setHovered={setHovered}>
+                <ProjectCard project={project} onOpenDetail={handleOpenDetail} />
+              </FocusCard>
             ))}
           </motion.div>
         </div>

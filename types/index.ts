@@ -10,4 +10,5 @@ export interface SocialItem {
   name: string;
   url: string;
   icon: ReactNode;
+  designation?: string;
 }

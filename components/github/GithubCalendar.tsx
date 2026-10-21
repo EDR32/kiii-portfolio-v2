@@ -30,7 +30,7 @@ export default function GithubActivity() {
           <h3 className="text-xl sm:text-2xl font-bold text-zinc-900 dark:text-white">
             GitHub <span className="text-accent-darker dark:text-accent">Contributions</span>
           </h3>
-          <span className="text-xs uppercase tracking-wider bg-accent/25 dark:bg-accent/15 border border-accent/40 text-black dark:text-accent px-3.5 py-0.5 rounded-full font-bold">
+          <span className="text-sm uppercase tracking-wider bg-accent/25 dark:bg-accent/15 border border-accent/40 text-black dark:text-accent px-3.5 py-0.5 rounded-full font-bold">
             @EDR32
           </span>
         </div>
@@ -43,6 +43,28 @@ export default function GithubActivity() {
               blockMargin={4}
               fontSize={12}
               colorScheme={isLight ? "light" : "dark"}
+              tooltips={{
+                activity: {
+                  text: (activity) => {
+                    const [year, month, day] = activity.date.split("-").map(Number);
+                    const dateObj = new Date(year, month - 1, day);
+                    const formattedDate = dateObj.toLocaleDateString("id-ID", {
+                      weekday: "long",
+                      day: "numeric",
+                      month: "short",
+                      year: "numeric",
+                    });
+
+                    if (activity.count === 0) {
+                      return `Tidak ada kontribusi pada ${formattedDate}`;
+                    }
+                    return `${activity.count} kontribusi pada ${formattedDate}`;
+                  },
+                  withArrow: true,
+                  hoverRestMs: 40,
+                  offset: 8,
+                },
+              }}
               theme={{
                 dark: [
                   "#161619", // empty
