@@ -33,7 +33,7 @@ export const timelineData: TimelineEntry[] = [
               Banten
             </span>
           </div>
-          <p className="text-sm text-zinc-600 dark:text-white/70 leading-relaxed mb-4 relative z-10">
+          <p className="text-sm text-justify text-zinc-600 dark:text-white/70 leading-relaxed mb-4 relative z-10">
             Berkontribusi di bidang Frontend Developer dalam membuat tampilan antarmuka modern dan
             responsif menggunakan React, Next.js, dan TypeScript.
           </p>
@@ -73,7 +73,7 @@ export const timelineData: TimelineEntry[] = [
               <MapPin className="w-3.5 h-3.5 text-accent-darker dark:text-accent" /> Cilegon, Banten
             </span>
           </div>
-          <p className="text-sm text-zinc-600 dark:text-white/70 leading-relaxed mb-4 relative z-10">
+          <p className="text-sm text-justify text-zinc-600 dark:text-white/70 leading-relaxed mb-4 relative z-10">
             Berkontribusi di bidang IT Programmer meliputi perbaikan dan pengembangan sistem
             absensi, QC aplikasi mobile, penanganan masalah hardware dan sosialisasi penggunaan
             aplikasi kepada user.
@@ -122,7 +122,7 @@ export const timelineData: TimelineEntry[] = [
               IPK 3.71 / Sangat Memuaskan
             </span>
           </div>
-          <p className="text-sm text-zinc-600 dark:text-white/70 leading-relaxed relative z-10">
+          <p className="text-sm text-justify text-zinc-600 dark:text-white/70 leading-relaxed relative z-10">
             Lulus dengan predikat sangat memuaskan (IPK 3.71 / 4.00). Fokus pada pengembangan sistem
             berbasis web, jaringan komputer, dan rekayasa perangkat lunak.
           </p>
@@ -153,7 +153,7 @@ export const timelineData: TimelineEntry[] = [
               Banten
             </span>
           </div>
-          <p className="text-sm text-zinc-600 dark:text-white/70 leading-relaxed mb-4 relative z-10">
+          <p className="text-sm text-justify text-zinc-600 dark:text-white/70 leading-relaxed mb-4 relative z-10">
             Merancang dan mengimplementasikan frontend website pemantauan CCTV Kota Serang guna
             meningkatkan aksesibilitas dan layanan publik pemantauan kota secara real-time.
           </p>
@@ -186,7 +186,7 @@ export const timelineData: TimelineEntry[] = [
               2024 - 2028
             </span>
           </div>
-          <p className="text-sm text-zinc-600 dark:text-white/70 leading-relaxed relative z-10">
+          <p className="text-sm text-justify text-zinc-600 dark:text-white/70 leading-relaxed relative z-10">
             Sertifikasi kompetensi resmi bidang Software Development berstandar BNSP untuk
             pengembangan perangkat lunak berbasis web, serta aktif sebagai pengurus Departemen
             Penelitian dan Pengembangan HAMKA STTIKOM Insan Unggul.
@@ -224,7 +224,7 @@ export const timelineData: TimelineEntry[] = [
               Banten
             </span>
           </div>
-          <p className="text-sm text-zinc-600 dark:text-white/70 leading-relaxed mb-4 relative z-10">
+          <p className="text-sm text-justify text-zinc-600 dark:text-white/70 leading-relaxed mb-4 relative z-10">
             Mengonfigurasi dan memelihara perangkat jaringan (router, switch, access point),
             merancang topologi, serta mendiagnosis permasalahan hardware &amp; software.
           </p>
@@ -266,7 +266,7 @@ export const timelineData: TimelineEntry[] = [
               Nilai Akhir: 86
             </span>
           </div>
-          <p className="text-sm text-zinc-600 dark:text-white/70 leading-relaxed relative z-10">
+          <p className="text-sm text-justify text-zinc-600 dark:text-white/70 leading-relaxed relative z-10">
             Mempelajari infrastruktur jaringan komputer, instalasi sistem operasi, routing &amp;
             switching, dan perakitan perangkat keras komputer.
           </p>
