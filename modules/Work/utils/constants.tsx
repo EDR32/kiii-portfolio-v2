@@ -8,13 +8,13 @@ export const projectsData: ProjectItem[] = [
     coverImage: "/serang1.jpg",
     images: ["/serang1.jpg", "/serang2.jpg", "/serang3.jpg"],
     shortDesc:
-      "Platform portal monitoring CCTV interaktif Kota Serang untuk memantau titik strategis fasilitas publik dan lalu lintas secara real-time.",
+      "Platform portal monitoring CCTV interaktif Kota Serang untuk memantau titik strategis fasilitas publik dan lalu lintas perkotaan.",
     fullDesc:
-      "Aplikasi dashboard monitoring CCTV berbasis web yang dirancang dan diimplementasikan untuk Diskominfo Kota Serang guna meningkatkan transparansi, keamanan, dan aksesibilitas layanan publik. Portal ini menyajikan live stream video dari puluhan titik kamera CCTV strategis di penjuru kota dengan latensi rendah dan tampilan antarmuka yang intuitif dan responsif.",
+      "Aplikasi dashboard monitoring CCTV berbasis web yang dirancang dan diimplementasikan untuk Diskominfo Kota Serang guna meningkatkan transparansi, keamanan dan aksesibilitas layanan publik. Portal ini menyajikan live stream video dari puluhan titik kamera CCTV strategis di penjuru kota dengan latensi rendah dan tampilan antarmuka yang intuitif dan responsif.",
     features: [
-      "Streaming video multi-kamera CCTV secara real-time dengan latency rendah",
+      "Streaming video multi-kamera CCTV dengan latensi rendah",
       "Pemetaan titik kamera interaktif berbasis peta digital wilayah Kota Serang",
-      "Pencarian & filter kamera berdasarkan nama jalan, persimpangan, dan kecamatan",
+      "Pencarian & filter kamera berdasarkan nama jalan, persimpangan dan kecamatan",
       "Mode Grid View dan Fullscreen untuk pemantauan terpadu beresolusi tinggi",
       "Desain antarmuka responsif dan ramah pengguna di perangkat mobile maupun desktop",
     ],
@@ -44,16 +44,16 @@ export const projectsData: ProjectItem[] = [
       "/crm/crm-blogs.jpeg",
     ],
     shortDesc:
-      "Platform enterprise CRM & CMS komprehensif untuk tata kelola kontrak PKS, pengajuan proposal SPH, customer ticketing, serta analitik berita & artikel.",
+      "Aplikasi enterprise CRM dan CMS untuk tata kelola kontrak kerja sama (PKS), pengajuan proposal SPH, helpdesk tiket serta analitik artikel dan berita.",
     fullDesc:
-      "Platform enterprise terpadu yang memadukan Customer Relationship Management (CRM) dan Content Management System (CMS) berskala besar. Sistem ini memfasilitasi administrasi legalitas kontrak kerja sama (PKS), penerbitan Surat Penawaran Harga (SPH), pengelolaan tiket kendala pelanggan (Helpdesk), serta sistem manajemen konten artikel dan berita lengkap dengan dashboard analitik performa traffic dan Open API.",
+      "Platform enterprise internal perusahaan yang mengintegrasikan Customer Relationship Management (CRM) dan Content Management System (CMS). Berfokus pada pengembangan antarmuka dan penambahan modul seperti proposal SPH digital, pengelolaan kontrak kerja sama (PKS), penanganan tiket kendala pelanggan (helpdesk), monitoring log Open API, dashboard ringkasan serta sistem publikasi artikel dan berita perusahaan.",
     features: [
-      "Manajemen kontrak kerja sama (PKS) dan otomasi pembuatan proposal SPH digital",
-      "Sistem helpdesk & detail ticketing terstruktur untuk tindak lanjut keluhan klien",
-      "Dashboard analitik berita & artikel dengan visualisasi statistik pembaca dan interaksi",
-      "Content Management System (CMS) modular untuk library artikel, berita, dan blog",
-      "Modul integrasi Open API untuk sinkronisasi data antar platform dan pihak ketiga",
-      "Manajemen hak akses pengguna dan pengaturan alur persetujuan (approval flow)",
+      "Penyusunan dan otomasi pembuatan proposal SPH digital serta administrasi kontrak kerja sama (PKS)",
+      "Sistem ticketing helpdesk terstruktur untuk pencatatan dan penanganan keluhan klien",
+      "Dashboard analitik performa artikel dan berita dengan visualisasi grafik pembaca",
+      "Content Management System (CMS) modular untuk perpustakaan artikel, berita dan blog",
+      "Modul integrasi dan monitoring log Open API untuk sinkronisasi data antar platform",
+      "Penyempurnaan tampilan antarmuka dan perbaikan bug pada modul Lead & Sales, Implementation serta Purchase Order",
     ],
     techStack: [
       "Next.js",
@@ -111,15 +111,16 @@ export const projectsData: ProjectItem[] = [
       "/nuha-klinik/klinik-detail-permintaan-resep.jpeg",
     ],
     shortDesc:
-      "Sistem informasi manajemen klinik kesehatan untuk monitoring arus kas keuangan, pelaporan rekapitulasi operasional medis dan tracking logistik permintaan obat.",
+      "Sistem informasi manajemen klinik kesehatan untuk migrasi modul laporan operasional medis, pencatatan kas keuangan dan pemantauan kartu stok obat.",
     fullDesc:
-      "Sistem Informasi Manajemen (SIM) Klinik yang dikembangkan khusus untuk memodernisasi tata kelola operasional dan keuangan klinik Nuha. Sistem ini mengintegrasikan pencatatan kas masuk dan kas keluar harian, verifikasi permintaan kebutuhan logistik medis antar divisi, serta dashboard pelaporan keuangan berkala yang akurat untuk mendukung pengambilan keputusan manajemen.",
+      "Aplikasi Sistem Informasi Manajemen (SIM) Klinik yang dikembangkan untuk memperbarui arsitektur sistem dari versi 1 ke versi 2. Berperan langsung dalam memigrasikan modul laporan operasional klinik yang meliputi laporan penjualan, laporan pembelian, kartu stok persediaan obat, histori resep obat, riwayat pasien serta rekapitulasi data kunjungan klinik.",
     features: [
-      "Dashboard pelaporan berkala dengan rekapitulasi transaksi pendapatan & pengeluaran operasional",
-      "Pencatatan kas masuk dan kas keluar terstruktur dengan bukti transaksi dan status verifikasi",
-      "Modul tracking detail permintaan obat dan pengadaan persediaan logistik medis",
-      "Pencarian, filter rentang tanggal dan ekspor data laporan rekapitulasi keuangan",
-      "Desain antarmuka yang bersih, mudah digunakan staf administrasi medis",
+      "Migrasi modul laporan operasional klinik secara menyeluruh dari versi 1 ke versi 2",
+      "Rekapitulasi dan pelaporan transaksi penjualan obat serta pembelian logistik klinik",
+      "Manajemen kartu stok untuk pemantauan ketersediaan obat dan bahan medis",
+      "Pelacakan histori resep obat dokter dan catatan riwayat kunjungan pasien",
+      "Pencatatan kas masuk dan kas keluar harian operasional klinik dengan status verifikasi",
+      "Filter rentang tanggal pencarian dan ekspor rekapitulasi data keuangan",
     ],
     techStack: [
       "React",
@@ -148,13 +149,13 @@ export const projectsData: ProjectItem[] = [
     shortDesc:
       "Sistem portal enterprise dan manajemen operasional studio berbasis Laravel dengan arsitektur modular dan antarmuka modern.",
     fullDesc:
-      "Portal sistem manajemen operasional studio dan perusahaan berskala enterprise yang mengelola alur kerja, inventaris perangkat, transaksi sewa/booking, serta pelaporan keuangan secara terpusat. Dibangun dengan fokus pada efisiensi operasional bisnis, keamanan multi-role permission, dan visualisasi data yang komprehensif.",
+      "Portal sistem manajemen operasional studio dan perusahaan berskala enterprise yang mengelola alur kerja, inventaris perangkat, transaksi sewa/booking serta pelaporan keuangan secara terpusat. Dibangun dengan fokus pada efisiensi operasional bisnis, keamanan multi-role permission dan visualisasi data yang komprehensif.",
     features: [
       "Sistem manajemen alur booking operasional dan reservasi studio terpusat",
       "Dashboard analitik performa bisnis dengan grafik transaksi berkala",
       "Autentikasi multi-role (Admin, Staff, Client) dengan permission bertingkat",
       "Manajemen inventaris peralatan dengan tracking status ketersediaan",
-      "Pelaporan otomatis, ekspor data, dan integrasi database terstruktur",
+      "Pelaporan otomatis, ekspor data dan integrasi database terstruktur",
     ],
     techStack: [
       "Laravel",

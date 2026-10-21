@@ -19,7 +19,7 @@ export const timelineData: TimelineEntry[] = [
               <Briefcase className="w-5 h-5 text-accent-darker dark:text-accent shrink-0" />
               Frontend Developer
             </h4>
-            <span className="text-xs sm:text-sm text-black dark:text-accent bg-accent/25 dark:bg-accent/15 border border-accent/40 px-3 py-1 rounded-full font-bold">
+            <span className="text-sm sm:text-sm text-black dark:text-accent bg-accent/25 dark:bg-accent/15 border border-accent/40 px-3 py-1 rounded-full font-bold">
               Apr 2026 - Okt 2026
             </span>
           </div>
@@ -34,18 +34,23 @@ export const timelineData: TimelineEntry[] = [
             </span>
           </div>
           <p className="text-sm text-justify text-zinc-600 dark:text-white/70 leading-relaxed mb-4 relative z-10">
-            Berkontribusi di bidang Frontend Developer dalam membuat tampilan antarmuka modern dan
-            responsif menggunakan React, Next.js, dan TypeScript.
+            Mengembangkan antarmuka aplikasi enterprise dan health-tech pada empat proyek utama:
+            CRM, HRIS, SIM Klinik V2 dan Nuha.care berbasis React, Next.js dan TypeScript.
+            Bertanggung jawab membangun komponen UI reusable, integrasi API backend, migrasi modul
+            laporan operasional SIM Klinik, penambahan modul proposal SPH, tiket helpdesk dan log
+            Open API pada CRM serta perbaikan bug tampilan dan fungsionalitas sistem.
           </p>
           <div className="flex flex-wrap gap-2 text-sm relative z-10">
-            {["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion"].map((tech) => (
-              <span
-                key={tech}
-                className="bg-zinc-100 dark:bg-white/5 border border-black/10 dark:border-white/10 px-2.5 py-1 rounded-md text-zinc-800 dark:text-white/80 font-medium text-xs sm:text-sm"
-              >
-                {tech}
-              </span>
-            ))}
+            {["Next.js", "React", "TypeScript", "Tailwind CSS", "REST API", "Clean Code"].map(
+              (tech) => (
+                <span
+                  key={tech}
+                  className="bg-zinc-100 dark:bg-white/5 border border-black/10 dark:border-white/10 px-2.5 py-1 rounded-md text-zinc-800 dark:text-white/80 font-medium text-sm sm:text-sm"
+                >
+                  {tech}
+                </span>
+              ),
+            )}
           </div>
         </div>
 
@@ -60,7 +65,7 @@ export const timelineData: TimelineEntry[] = [
               <Briefcase className="w-5 h-5 text-accent-darker dark:text-accent shrink-0" />
               IT Programmer
             </h4>
-            <span className="text-xs sm:text-sm text-black dark:text-accent bg-accent/25 dark:bg-accent/15 border border-accent/40 px-3 py-1 rounded-full font-bold">
+            <span className="text-sm sm:text-sm text-black dark:text-accent bg-accent/25 dark:bg-accent/15 border border-accent/40 px-3 py-1 rounded-full font-bold">
               Okt 2025 - Apr 2026
             </span>
           </div>
@@ -83,7 +88,7 @@ export const timelineData: TimelineEntry[] = [
               (tech) => (
                 <span
                   key={tech}
-                  className="bg-zinc-100 dark:bg-white/5 border border-black/10 dark:border-white/10 px-2.5 py-1 rounded-md text-zinc-800 dark:text-white/80 font-medium text-xs sm:text-sm"
+                  className="bg-zinc-100 dark:bg-white/5 border border-black/10 dark:border-white/10 px-2.5 py-1 rounded-md text-zinc-800 dark:text-white/80 font-medium text-sm sm:text-sm"
                 >
                   {tech}
                 </span>
@@ -109,7 +114,7 @@ export const timelineData: TimelineEntry[] = [
               <GraduationCap className="w-5 h-5 text-accent-darker dark:text-accent shrink-0" />
               S1 - Teknik Informatika (IPK 3.71)
             </h4>
-            <span className="text-xs sm:text-sm text-black dark:text-accent bg-accent/25 dark:bg-accent/15 border border-accent/40 px-3 py-1 rounded-full font-bold">
+            <span className="text-sm sm:text-sm text-black dark:text-accent bg-accent/25 dark:bg-accent/15 border border-accent/40 px-3 py-1 rounded-full font-bold">
               2021 - 2025
             </span>
           </div>
@@ -118,13 +123,13 @@ export const timelineData: TimelineEntry[] = [
               STTIKOM Insan Unggul
             </span>
             <span>•</span>
-            <span className="text-xs sm:text-sm text-emerald-600 dark:text-emerald-400 font-bold bg-emerald-500/10 border border-emerald-500/25 px-2 py-0.5 rounded">
+            <span className="text-sm sm:text-sm text-emerald-600 dark:text-emerald-400 font-bold bg-emerald-500/10 border border-emerald-500/25 px-2 py-0.5 rounded">
               IPK 3.71 / Sangat Memuaskan
             </span>
           </div>
           <p className="text-sm text-justify text-zinc-600 dark:text-white/70 leading-relaxed relative z-10">
             Lulus dengan predikat sangat memuaskan (IPK 3.71 / 4.00). Fokus pada pengembangan sistem
-            berbasis web, jaringan komputer, dan rekayasa perangkat lunak.
+            berbasis web, jaringan komputer dan rekayasa perangkat lunak.
           </p>
         </div>
 
@@ -139,7 +144,7 @@ export const timelineData: TimelineEntry[] = [
               <Briefcase className="w-5 h-5 text-accent-darker dark:text-accent shrink-0" />
               E-Government Frontend Developer
             </h4>
-            <span className="text-xs sm:text-sm text-black dark:text-accent bg-accent/25 dark:bg-accent/15 border border-accent/40 px-3 py-1 rounded-full font-bold">
+            <span className="text-sm sm:text-sm text-black dark:text-accent bg-accent/25 dark:bg-accent/15 border border-accent/40 px-3 py-1 rounded-full font-bold">
               Jul 2024 - Agu 2024
             </span>
           </div>
@@ -162,7 +167,7 @@ export const timelineData: TimelineEntry[] = [
               (tech) => (
                 <span
                   key={tech}
-                  className="bg-zinc-100 dark:bg-white/5 border border-black/10 dark:border-white/10 px-2.5 py-1 rounded-md text-zinc-800 dark:text-white/80 font-medium text-xs sm:text-sm"
+                  className="bg-zinc-100 dark:bg-white/5 border border-black/10 dark:border-white/10 px-2.5 py-1 rounded-md text-zinc-800 dark:text-white/80 font-medium text-sm sm:text-sm"
                 >
                   {tech}
                 </span>
@@ -182,7 +187,7 @@ export const timelineData: TimelineEntry[] = [
               <Award className="w-5 h-5 text-accent-darker dark:text-accent shrink-0" />
               Sertifikasi BNSP &amp; Litbang HAMKA
             </h4>
-            <span className="text-xs sm:text-sm text-black dark:text-accent bg-accent/25 dark:bg-accent/15 border border-accent/40 px-3 py-1 rounded-full font-bold">
+            <span className="text-sm sm:text-sm text-black dark:text-accent bg-accent/25 dark:bg-accent/15 border border-accent/40 px-3 py-1 rounded-full font-bold">
               2024 - 2028
             </span>
           </div>
@@ -210,7 +215,7 @@ export const timelineData: TimelineEntry[] = [
               <Briefcase className="w-5 h-5 text-accent-darker dark:text-accent shrink-0" />
               Teknisi Jaringan
             </h4>
-            <span className="text-xs sm:text-sm text-black dark:text-accent bg-accent/25 dark:bg-accent/15 border border-accent/40 px-3 py-1 rounded-full font-bold">
+            <span className="text-sm sm:text-sm text-black dark:text-accent bg-accent/25 dark:bg-accent/15 border border-accent/40 px-3 py-1 rounded-full font-bold">
               Jan 2020 - Apr 2020
             </span>
           </div>
@@ -233,7 +238,7 @@ export const timelineData: TimelineEntry[] = [
               (tech) => (
                 <span
                   key={tech}
-                  className="bg-zinc-100 dark:bg-white/5 border border-black/10 dark:border-white/10 px-2.5 py-1 rounded-md text-zinc-800 dark:text-white/80 font-medium text-xs sm:text-sm"
+                  className="bg-zinc-100 dark:bg-white/5 border border-black/10 dark:border-white/10 px-2.5 py-1 rounded-md text-zinc-800 dark:text-white/80 font-medium text-sm sm:text-sm"
                 >
                   {tech}
                 </span>
@@ -253,7 +258,7 @@ export const timelineData: TimelineEntry[] = [
               <GraduationCap className="w-5 h-5 text-accent-darker dark:text-accent shrink-0" />
               SMK - Teknik Komputer dan Jaringan
             </h4>
-            <span className="text-xs sm:text-sm text-black dark:text-accent bg-accent/25 dark:bg-accent/15 border border-accent/40 px-3 py-1 rounded-full font-bold">
+            <span className="text-sm sm:text-sm text-black dark:text-accent bg-accent/25 dark:bg-accent/15 border border-accent/40 px-3 py-1 rounded-full font-bold">
               2018 - 2021
             </span>
           </div>
@@ -262,13 +267,13 @@ export const timelineData: TimelineEntry[] = [
               SMK Negeri 1 Kota Serang
             </span>
             <span>•</span>
-            <span className="text-xs sm:text-sm text-black dark:text-accent font-bold bg-accent/20 dark:bg-accent/15 border border-accent/40 px-2 py-0.5 rounded">
+            <span className="text-sm sm:text-sm text-black dark:text-accent font-bold bg-accent/20 dark:bg-accent/15 border border-accent/40 px-2 py-0.5 rounded">
               Nilai Akhir: 86
             </span>
           </div>
           <p className="text-sm text-justify text-zinc-600 dark:text-white/70 leading-relaxed relative z-10">
             Mempelajari infrastruktur jaringan komputer, instalasi sistem operasi, routing &amp;
-            switching, dan perakitan perangkat keras komputer.
+            switching dan perakitan perangkat keras komputer.
           </p>
         </div>
       </div>

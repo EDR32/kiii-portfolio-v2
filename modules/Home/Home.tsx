@@ -20,7 +20,7 @@ const Home = () => {
         <div className="text-center flex flex-col justify-center xl:pt-20 xl:text-left h-full container mx-auto px-6 md:px-16 xl:px-0">
           {/* Intro & Title */}
           <motion.div variants={fadeIn("down", 0.2)} initial="hidden" animate="show" exit="hidden">
-            <div className="inline-block px-4 py-1.5 mb-4 rounded-full bg-accent/20 dark:bg-accent/15 border border-accent/50 text-zinc-900 dark:text-accent text-xs md:text-sm font-bold tracking-wider uppercase shadow-xs">
+            <div className="inline-block px-4 py-1.5 mb-4 rounded-full bg-accent/20 dark:bg-accent/15 border border-accent/50 text-zinc-900 dark:text-accent text-sm md:text-sm font-bold tracking-wider uppercase shadow-xs">
               Hi, I&apos;m Eki Dama Rukmana — Frontend Developer
             </div>
             <h1 className="h1 text-3xl md:text-5xl xl:text-6xl font-extrabold mb-6 text-zinc-900 dark:text-white">
@@ -37,11 +37,11 @@ const Home = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16 text-zinc-600 dark:text-white/75 text-sm md:text-base leading-relaxed"
+            className="xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16 text-zinc-600 dark:text-white/75 text-sm md:text-base leading-relaxed"
           >
-            Frontend Developer lulusan S1 Teknik Informatika yang berdedikasi membangun
-            aplikasi web modern, responsif dan berperforma tinggi. Berpengalaman dengan React,
-            Next.js, TypeScript dan implementasi sistem informasi publik.
+            Frontend Developer lulusan S1 Teknik Informatika yang berdedikasi membangun aplikasi web
+            modern, responsif dan berperforma tinggi. Berpengalaman dengan React, Next.js,
+            TypeScript dan implementasi sistem informasi publik.
           </motion.p>
 
           {/* Button on Mobile */}

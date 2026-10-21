@@ -33,14 +33,14 @@ const Services = () => {
               viewport={{ once: true, amount: 0.2 }}
               className="max-w-2xl mx-auto text-zinc-600 dark:text-white/70 text-sm md:text-base leading-relaxed"
             >
-              Layanan terintegrasi mulai dari pengembangan antarmuka web modern (React, Next.js,
-              TypeScript), implementasi platform digital, hingga arsitektur
-              sistem dan infrastruktur jaringan komputer.
+              Layanan terintegrasi mulai dari pengembangan antarmuka web modern (React, Next.js dan
+              TypeScript), implementasi platform digital hingga arsitektur sistem dan infrastruktur
+              jaringan komputer.
             </motion.p>
           </div>
 
           {/* Grid */}
-          <div className="w-full max-w-6xl">
+          <div className="w-full">
             <ServiceGrid />
           </div>
         </div>

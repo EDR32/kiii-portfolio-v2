@@ -26,7 +26,7 @@ const Header = () => {
                 className="w-24 sm:w-32 md:w-36 h-auto object-contain transition-all duration-300 dark:brightness-100 brightness-0"
               />
             </div>
-            <span className="hidden sm:inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold tracking-wider uppercase bg-accent text-black shadow-xs">
+            <span className="hidden sm:inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-sm font-bold tracking-wider uppercase bg-accent text-black shadow-xs">
               PORTFOLIO
             </span>
           </Link>
@@ -52,7 +52,7 @@ const Header = () => {
             href="/CV_ATS_PUBLIC_EKI DAMA RUKMANA - Copy.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full font-semibold text-xs sm:text-sm bg-accent text-black hover:bg-accent-hover transition-all duration-300 shadow-[0_0_15px_rgba(255,221,51,0.25)] hover:shadow-[0_0_20px_rgba(255,221,51,0.4)] hover:scale-105 active:scale-95 cursor-pointer"
+            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full font-semibold text-sm sm:text-sm bg-accent text-black hover:bg-accent-hover transition-all duration-300 shadow-[0_0_15px_rgba(255,221,51,0.25)] hover:shadow-[0_0_20px_rgba(255,221,51,0.4)] hover:scale-105 active:scale-95 cursor-pointer"
             title="Download Curriculum Vitae"
           >
             <Download className="w-3.5 h-3.5 sm:w-4 sm:h-4 stroke-[2.5]" />

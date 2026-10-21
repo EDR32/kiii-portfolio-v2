@@ -279,3 +279,39 @@ body,
   z-index: 9999;
   will-change: clip-path;
 }
+
+/* GitHub Activity Calendar Tooltip */
+.react-activity-calendar__tooltip {
+  width: max-content;
+  max-width: calc(100vw - 24px);
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.4;
+  pointer-events: none;
+  z-index: 99999;
+  background-color: #121215;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.6), 0 0 12px rgba(255, 221, 51, 0.2);
+  backdrop-filter: blur(8px);
+}
+
+.react-activity-calendar__tooltip .react-activity-calendar__tooltip-arrow {
+  fill: #121215;
+  stroke: rgba(255, 255, 255, 0.15);
+}
+
+/* Light mode tooltip */
+.react-activity-calendar__tooltip[data-color-scheme="light"] {
+  background-color: #ffffff;
+  color: #09090b;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15);
+}
+
+.react-activity-calendar__tooltip[data-color-scheme="light"] .react-activity-calendar__tooltip-arrow {
+  fill: #ffffff;
+  stroke: rgba(0, 0, 0, 0.12);
+}

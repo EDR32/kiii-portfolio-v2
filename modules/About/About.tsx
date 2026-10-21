@@ -41,12 +41,12 @@ const About = () => {
               initial="hidden"
               whileInView="show"
               viewport={{ once: true, amount: 0.2 }}
-              className="max-w-125 mx-auto xl:mx-0 mb-6 xl:mb-10 px-2 xl:px-0 text-zinc-600 dark:text-white/70 text-sm md:text-base leading-relaxed"
+              className="mx-auto xl:mx-0 mb-6 xl:mb-10 px-2 xl:px-0 text-zinc-600 dark:text-white/70 text-sm md:text-base leading-relaxed"
             >
-              Lulusan S1 Teknik Informatika STTIKOM Insan Unggul dengan passion tinggi di bidang web
-              development khusus nya Frontend. Berpengalaman membangun antarmuka seperti portal
-              monitoring CCTV, CRM Portal, Portofolio serta aplikasi antarmuka modern lainnya
-              berbasis HTML, CSS, React, Next.js, TypeScript, DLL.
+              Lulusan S1 Teknik Informatika STTIKOM Insan Unggul dengan fokus di bidang Frontend Web
+              Development. Berpengalaman mengembangkan antarmuka aplikasi enterprise dan health-tech
+              seperti sistem informasi manajemen klinik, CRM portal, HRIS serta portal pemantauan
+              CCTV berbasis HTML, CSS, React, Next.js dan TypeScript.
             </motion.p>
 
             {/* Counters */}
@@ -82,7 +82,7 @@ const About = () => {
                   <div className="font-bold text-zinc-900 dark:text-white text-base md:text-lg">
                     {skillGroup.title}
                   </div>
-                  <span className="text-xs text-black dark:text-accent bg-accent/25 dark:bg-accent/15 border border-accent/40 px-2.5 py-0.5 rounded-full font-bold">
+                  <span className="text-sm text-black dark:text-accent bg-accent/25 dark:bg-accent/15 border border-accent/40 px-2.5 py-0.5 rounded-full font-bold">
                     {groupIdx === 0
                       ? "Core Focus"
                       : groupIdx === 1
@@ -92,7 +92,7 @@ const About = () => {
                 </div>
 
                 {skillGroup.subtitle && (
-                  <div className="text-xs md:text-sm text-zinc-500 dark:text-white/60 mb-3 font-normal text-center xl:text-left">
+                  <div className="text-sm md:text-sm text-zinc-500 dark:text-white/60 mb-3 font-normal text-center xl:text-left">
                     {skillGroup.subtitle}
                   </div>
                 )}
@@ -122,15 +122,14 @@ const About = () => {
           viewport={{ once: true, amount: 0.1 }}
           className="w-full pt-4 text-center"
         >
-          <div className="text-center xl:text-left mb-6">
-            <h3 className="h3 text-2xl md:text-4xl font-bold text-zinc-900 dark:text-white mb-2 text-center">
+          <div className="text-center xl:text-left">
+            <h2 className="h2 text-3xl md:text-5xl font-bold text-zinc-900 dark:text-white mb-2 text-center">
               Career &amp;{" "}
-              <span className="text-accent-darker dark:text-accent text-center">
-                Academic Journey
-              </span>
-            </h3>
-            <p className="text-sm md:text-base text-center text-zinc-600 dark:text-white/60 max-w-xl mx-auto w-full">
-              Perjalanan, riwayat pendidikan, sertifikasi kompetensi dan pengalaman saya sampai saat ini.
+              <span className="text-accent-darker dark:text-accent">Academic Journey</span>
+            </h2>
+            <p className="text-sm md:text-base text-center text-zinc-600 dark:text-white/60 max-w-2xl mx-auto w-full">
+              Rangkuman perjalanan karier, riwayat pendidikan, sertifikasi kompetensi serta
+              kontribusi proyek yang membentuk keahlian teknis saya sampai saat ini.
             </p>
           </div>
           <AboutTimeline />
