@@ -5,6 +5,7 @@ import Image from "next/image";
 import ModalDialog from "@/components/layout/ModalDialog";
 import { ProjectItem } from "../@types/type";
 import { ChevronLeft, ChevronRight, CheckCircle2, Code2, Sparkles } from "lucide-react";
+import Badge from "@/components/ui/badge";
 
 interface ProjectModalProps {
   project: ProjectItem | null;
@@ -45,14 +46,14 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
       maxWidth="lg"
       footer={
         <div className="flex flex-wrap items-center justify-between gap-3 w-full">
-          <div className="flex items-center gap-2 text-sm text-zinc-500 dark:text-white/50">
+          <div className="flex items-center gap-2 text-sm text-muted-foreground">
             <span>{images.length} tangkapan layar tersedia</span>
           </div>
           <div className="flex items-center gap-3">
             <button
               type="button"
               onClick={onClose}
-              className="bg-zinc-200 dark:bg-white/10 hover:bg-zinc-300 dark:hover:bg-white/20 text-zinc-800 dark:text-white px-4 py-2 rounded-xl text-sm font-semibold transition-colors cursor-pointer"
+              className="bg-muted hover:bg-muted/80 text-foreground px-4 py-2 rounded-xl text-sm font-semibold transition-colors cursor-pointer"
             >
               Tutup
             </button>
@@ -61,7 +62,7 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
       }
     >
       <div className="flex flex-col gap-y-6 pt-2">
-        <div className="relative w-full rounded-2xl overflow-hidden bg-black/10 dark:bg-black/60 border border-black/10 dark:border-white/10 shadow-xl group">
+        <div className="relative w-full rounded-2xl overflow-hidden bg-muted border border-border shadow-xl group">
           <div className="relative w-auto h-80 sm:h-96 flex items-center justify-center">
             <Image
               src={images[activeImageIndex]}
@@ -113,7 +114,7 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
                 className={`relative w-20 h-14 rounded-lg overflow-hidden border-2 shrink-0 transition-all cursor-pointer ${
                   activeImageIndex === idx
                     ? "border-accent scale-105 shadow-md shadow-accent/30"
-                    : "border-black/15 dark:border-white/15 opacity-60 hover:opacity-100"
+                    : "border-border opacity-60 hover:opacity-100"
                 }`}
               >
                 <Image src={img} alt={`Thumbnail ${idx + 1}`} fill className="object-cover" />
@@ -122,27 +123,27 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
           </div>
         )}
 
-        <div className="bg-zinc-50 dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-2xl p-5 sm:p-6">
-          <h4 className="text-base sm:text-lg font-bold text-zinc-900 dark:text-white mb-2.5 flex items-center gap-2">
-            <Sparkles className="w-4 h-4 text-accent-darker dark:text-accent" />
+        <div className="bg-muted/50 border border-border rounded-2xl p-5 sm:p-6">
+          <h4 className="text-base sm:text-lg font-bold text-foreground mb-2.5 flex items-center gap-2">
+            <Sparkles className="w-4 h-4 text-accent" />
             Deskripsi Proyek
           </h4>
-          <p className="text-sm sm:text-base text-zinc-600 dark:text-white/75 leading-relaxed">
+          <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
             {project.fullDesc}
           </p>
         </div>
 
         {project.features && project.features.length > 0 && (
-          <div className="bg-zinc-50 dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-2xl p-5 sm:p-6">
-            <h4 className="text-base sm:text-lg font-bold text-zinc-900 dark:text-white mb-3.5 flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-accent-darker dark:text-accent" />
+          <div className="bg-muted/50 border border-border rounded-2xl p-5 sm:p-6">
+            <h4 className="text-base sm:text-lg font-bold text-foreground mb-3.5 flex items-center gap-2">
+              <CheckCircle2 className="w-4 h-4 text-accent" />
               Fitur Utama
             </h4>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {project.features.map((feature, idx) => (
                 <div
                   key={idx}
-                  className="flex items-start gap-2.5 bg-white dark:bg-[#202020] border border-black/10 dark:border-white/10 p-3 rounded-xl text-sm sm:text-sm text-zinc-800 dark:text-white/85 shadow-xs"
+                  className="flex items-start gap-2.5 bg-card border border-border p-3 rounded-xl text-sm sm:text-sm text-card-foreground shadow-xs"
                 >
                   <span>{feature}</span>
                 </div>
@@ -152,19 +153,16 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
         )}
 
         {project.techStack && project.techStack.length > 0 && (
-          <div className="bg-zinc-50 dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-2xl p-5 sm:p-6">
-            <h4 className="text-base sm:text-lg font-bold text-zinc-900 dark:text-white mb-3 flex items-center gap-2">
-              <Code2 className="w-4 h-4 text-accent-darker dark:text-accent" />
+          <div className="bg-muted/50 border border-border rounded-2xl p-5 sm:p-6">
+            <h4 className="text-base sm:text-lg font-bold text-foreground mb-3 flex items-center gap-2">
+              <Code2 className="w-4 h-4 text-accent" />
               Teknologi &amp; Arsitektur
             </h4>
             <div className="flex flex-wrap gap-2">
               {project.techStack.map((tech, idx) => (
-                <span
-                  key={idx}
-                  className="bg-accent/20 dark:bg-accent/15 border border-accent/40 text-black dark:text-accent px-3.5 py-1 rounded-xl text-sm sm:text-sm font-bold shadow-xs"
-                >
+                <Badge key={idx} variant="accent" size="md" rounded="lg">
                   {tech}
-                </span>
+                </Badge>
               ))}
             </div>
           </div>

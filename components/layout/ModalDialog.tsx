@@ -54,24 +54,24 @@ const ModalDialog = ({
     <Dialog open={open} onOpenChange={handleClose}>
       <DialogContent
         data-lenis-prevent
-        className={`${widthDialogClasses[maxWidth]} bg-white dark:bg-card border border-black/10 dark:border-white/10 text-zinc-900 dark:text-white shadow-2xl p-6 sm:p-8 rounded-2xl gap-0 max-h-[90vh] flex flex-col overscroll-contain`}
+        className={`${widthDialogClasses[maxWidth]} bg-card border border-border text-foreground shadow-2xl p-6 sm:p-8 rounded-2xl gap-0 max-h-[90vh] flex flex-col overscroll-contain`}
         showCloseButton={withCloseButton}
       >
         <DialogHeader className="mb-4 text-left shrink-0">
           {title && (
-            <DialogTitle className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white">
+            <DialogTitle className="text-2xl sm:text-3xl font-bold text-foreground">
               {title}
             </DialogTitle>
           )}
           {desc && (
             <DialogDescription
               asChild
-              className="text-zinc-600 dark:text-white/70 mt-1 text-sm sm:text-base"
+              className="text-muted-foreground mt-1 text-sm sm:text-base"
             >
               <div>{desc}</div>
             </DialogDescription>
           )}
-          {(title || desc) && <Separator className="mt-3 border-black/10 dark:border-white/10" />}
+          {(title || desc) && <Separator className="mt-3 border-border" />}
         </DialogHeader>
 
         <ScrollArea
@@ -83,14 +83,14 @@ const ModalDialog = ({
         >
           <div
             data-lenis-prevent
-            className={`${title || desc ? "my-2" : "mt-0"} pr-3 text-zinc-700 dark:text-white/80`}
+            className={`${title || desc ? "my-2" : "mt-0"} pr-3 text-foreground/90`}
           >
             {children}
           </div>
         </ScrollArea>
 
         {footer && (
-          <div className="mt-4 pt-3 border-t border-black/10 dark:border-white/10 shrink-0">
+          <div className="mt-4 pt-3 border-t border-border shrink-0">
             {footer}
           </div>
         )}

@@ -2,6 +2,13 @@ import React from "react";
 import { Code2, Globe, Layers, Zap, Monitor, Wrench } from "lucide-react";
 import { ServiceItem } from "../@types/type";
 
+export const servicesHeaderData = {
+  titlePrefix: "My ",
+  titleHighlight: "Services",
+  description:
+    "Layanan terintegrasi mulai dari pengembangan antarmuka web modern (React, Next.js dan TypeScript), implementasi platform digital hingga arsitektur sistem dan infrastruktur jaringan komputer.",
+};
+
 export const serviceData: ServiceItem[] = [
   {
     icon: <Code2 size={36} />,

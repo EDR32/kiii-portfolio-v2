@@ -12,7 +12,7 @@ const Socials = () => {
           href={social.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="p-1.5 rounded-lg text-zinc-600 hover:text-black dark:text-white/70 dark:hover:text-accent hover:bg-black/5 dark:hover:bg-white/5 transition-all duration-300"
+          className="p-1.5 rounded-lg text-muted-foreground hover:text-accent hover:bg-muted transition-all duration-300"
           aria-label={social.name}
           title={social.name}
         >

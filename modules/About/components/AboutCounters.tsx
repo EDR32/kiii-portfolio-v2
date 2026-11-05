@@ -1,47 +1,35 @@
 import CountUp from "react-countup";
+import { aboutCountersData } from "@/modules/About/utils/constants";
 
 const AboutCounters = () => {
   return (
     <div className="flex flex-1 xl:gap-x-6">
-      {/* GPA */}
-      <div className="relative flex-1 after:w-px after:h-full after:bg-black/10 dark:after:bg-white/10 after:absolute after:top-0 after:right-0">
-        <div className="text-2xl xl:text-4xl font-extrabold text-accent-darker dark:text-accent mb-2">
-          <CountUp start={0} end={3.71} decimals={2} duration={3} />
-        </div>
-        <div className="text-sm sm:text-sm uppercase tracking-[1px] leading-[1.4] max-w-25 text-zinc-600 dark:text-zinc-300 font-medium">
-          IPK / GPA (Scale 4.0)
-        </div>
-      </div>
-
-      {/* Experience */}
-      <div className="relative flex-1 after:w-px after:h-full after:bg-black/10 dark:after:bg-white/10 after:absolute after:top-0 after:right-0">
-        <div className="text-2xl xl:text-4xl font-extrabold text-accent-darker dark:text-accent mb-2">
-          <CountUp start={0} end={4} duration={3} /> +
-        </div>
-        <div className="text-sm sm:text-sm uppercase tracking-[1px] leading-[1.4] max-w-25 text-zinc-600 dark:text-zinc-300 font-medium">
-          Years Tech Journey
-        </div>
-      </div>
-
-      {/* Projects */}
-      <div className="relative flex-1 after:w-px after:h-full after:bg-black/10 dark:after:bg-white/10 after:absolute after:top-0 after:right-0">
-        <div className="text-2xl xl:text-4xl font-extrabold text-accent-darker dark:text-accent mb-2">
-          <CountUp start={0} end={15} duration={3} /> +
-        </div>
-        <div className="text-sm sm:text-sm uppercase tracking-[1px] leading-[1.4] max-w-25 text-zinc-600 dark:text-zinc-300 font-medium">
-          Projects & Repos
-        </div>
-      </div>
-
-      {/* Certifications */}
-      <div className="relative flex-1">
-        <div className="text-2xl xl:text-4xl font-extrabold text-accent-darker dark:text-accent mb-2">
-          <CountUp start={0} end={2} duration={3} /> +
-        </div>
-        <div className="text-sm sm:text-sm uppercase tracking-[1px] leading-[1.4] max-w-25 text-zinc-600 dark:text-zinc-300 font-medium">
-          Certified Credentials
-        </div>
-      </div>
+      {aboutCountersData.map((counter, index) => {
+        const isLast = index === aboutCountersData.length - 1;
+        return (
+          <div
+            key={counter.label}
+            className={`relative flex-1 ${
+              !isLast
+                ? "after:w-px after:h-full after:bg-border after:absolute after:top-0 after:right-0"
+                : ""
+            }`}
+          >
+            <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
+              <CountUp
+                start={0}
+                end={counter.value}
+                decimals={counter.decimals}
+                duration={3}
+              />
+              {counter.suffix ? counter.suffix : ""}
+            </div>
+            <div className="text-sm sm:text-sm uppercase tracking-[1px] leading-[1.4] max-w-25 text-muted-foreground font-medium">
+              {counter.label}
+            </div>
+          </div>
+        );
+      })}
     </div>
   );
 };

@@ -1,11 +1,19 @@
 "use client";
 
-import { useMemo, useCallback } from "react";
+import { useMemo, useCallback, useSyncExternalStore } from "react";
+import { useTheme } from "next-themes";
 import Particles, { ParticlesProvider } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 import type { Engine, ISourceOptions } from "@tsparticles/engine";
 
+const emptySubscribe = () => () => {};
+
 const ParticlesContainer = () => {
+  const { resolvedTheme } = useTheme();
+  const mounted = useSyncExternalStore(emptySubscribe, () => true, () => false);
+
+  const isLight = mounted && resolvedTheme === "light";
+
   const init = useCallback(async (engine: Engine) => {
     await loadSlim(engine);
   }, []);
@@ -42,14 +50,14 @@ const ParticlesContainer = () => {
       },
       particles: {
         color: {
-          value: "#FFDD33",
+          value: isLight ? "#B8860B" : "#FFDD33",
         },
         links: {
-          color: "#FFE566",
+          color: isLight ? "#B48228" : "#FFE566",
           distance: 150,
           enable: true,
-          opacity: 0.35,
-          width: 1,
+          opacity: isLight ? 0.6 : 0.35,
+          width: isLight ? 1.2 : 1,
         },
         collisions: {
           enable: false,
@@ -71,7 +79,7 @@ const ParticlesContainer = () => {
           value: 45,
         },
         opacity: {
-          value: 0.5,
+          value: isLight ? 0.8 : 0.5,
         },
         shape: {
           type: "circle",
@@ -82,13 +90,18 @@ const ParticlesContainer = () => {
       },
       detectRetina: true,
     }),
-    []
+    [isLight]
   );
 
   return (
     <div className="w-full h-full absolute translate-z-0 pointer-events-none">
       <ParticlesProvider init={init}>
-        <Particles id="tsparticles" className="w-full h-full" options={options} />
+        <Particles
+          key={isLight ? "particles-light" : "particles-dark"}
+          id="tsparticles"
+          className="w-full h-full"
+          options={options}
+        />
       </ParticlesProvider>
     </div>
   );
