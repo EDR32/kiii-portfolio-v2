@@ -13,7 +13,7 @@ const Layout = ({ children }: LayoutProps) => {
     <div className="page text-foreground font-seed relative min-h-screen flex flex-col justify-between selection:bg-accent selection:text-black">
       {/* Ambient background with white atmospheric gradient */}
       <div
-        className="fixed inset-0 -z-10 bg-[#F7F8FA] dark:bg-black transition-colors duration-300 pointer-events-none transform-gpu"
+        className="fixed inset-0 -z-10 bg-background transition-colors duration-300 pointer-events-none transform-gpu"
         aria-hidden="true"
       >
         {/* In dark mode: white radial atmospheric spotlights */}

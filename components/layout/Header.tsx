@@ -8,7 +8,7 @@ import { Download } from "lucide-react";
 
 const Header = () => {
   return (
-    <header className="fixed top-0 left-0 right-0 z-40 w-full transition-colors duration-300 bg-[#F7F8FA]/85 dark:bg-black/80 backdrop-blur-md border-b border-black/10 dark:border-white/10 h-16 md:h-18">
+    <header className="fixed top-0 left-0 right-0 z-40 w-full transition-colors duration-300 bg-background/80 backdrop-blur-md border-b border-border h-16 md:h-18">
       <div className="container mx-auto h-full px-4 sm:px-6 md:px-10 lg:px-12 flex items-center justify-between">
         {/* Left: Brand / Logo */}
         <div className="flex items-center gap-3">
@@ -26,9 +26,6 @@ const Header = () => {
                 className="w-24 sm:w-32 md:w-36 h-auto object-contain transition-all duration-300 dark:brightness-100 brightness-0"
               />
             </div>
-            <span className="hidden sm:inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-sm font-bold tracking-wider uppercase bg-accent text-black shadow-xs">
-              PORTFOLIO
-            </span>
           </Link>
         </div>
 
@@ -40,7 +37,7 @@ const Header = () => {
           </div>
 
           {/* Vertical Divider */}
-          <div className="h-5 w-px bg-black/10 dark:bg-white/15 mx-0.5 sm:mx-1" />
+          <div className="h-5 w-px bg-border mx-0.5 sm:mx-1" />
 
           {/* Theme Switcher with Top-Right to Bottom-Left Reveal */}
           <div className="relative flex items-center">

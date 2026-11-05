@@ -53,7 +53,7 @@ export default function ThemeToggle() {
 
   if (!mounted) {
     return (
-      <div className="w-9 h-9 rounded-full bg-white/10 dark:bg-white/10 border border-white/15 dark:border-white/15 animate-pulse" />
+      <div className="w-9 h-9 rounded-full bg-muted border border-border animate-pulse" />
     );
   }
 
@@ -65,9 +65,7 @@ export default function ThemeToggle() {
       onClick={handleToggle}
       aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
       title={isDark ? "Aktifkan Tema Terang" : "Aktifkan Tema Gelap"}
-      className="relative flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-full border transition-all duration-300 focus:outline-hidden cursor-pointer
-        bg-white/80 hover:bg-white text-zinc-800 border-black/10 shadow-xs hover:border-accent hover:shadow-[0_0_12px_rgba(255,221,51,0.35)]
-        dark:bg-white/10 dark:hover:bg-white/15 dark:text-white dark:border-white/15 dark:hover:border-accent dark:hover:shadow-[0_0_15px_rgba(255,221,51,0.3)]"
+      className="relative flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-border bg-card/80 hover:bg-card text-foreground transition-all duration-300 focus:outline-hidden cursor-pointer shadow-xs hover:border-accent hover:shadow-[0_0_12px_rgba(255,221,51,0.35)]"
     >
       <AnimatePresence mode="wait" initial={false}>
         {isDark ? (

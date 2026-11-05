@@ -3,16 +3,10 @@
 import { useState, FormEvent, ChangeEvent } from "react";
 import { ArrowRight, CheckCircle2, AlertCircle } from "lucide-react";
 import { ContactFormState } from "@/modules/Contact/@types/type";
-
-const initialFormState: ContactFormState = {
-  name: "",
-  email: "",
-  subject: "",
-  message: "",
-};
+import { initialContactFormState } from "@/modules/Contact/utils/constants";
 
 const ContactForm = () => {
-  const [formData, setFormData] = useState<ContactFormState>(initialFormState);
+  const [formData, setFormData] = useState<ContactFormState>(initialContactFormState);
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
 
@@ -40,7 +34,7 @@ const ContactForm = () => {
       }
 
       setStatus("success");
-      setFormData(initialFormState);
+      setFormData(initialContactFormState);
 
       setTimeout(() => {
         setStatus("idle");
@@ -124,7 +118,7 @@ const ContactForm = () => {
       <button
         type="submit"
         disabled={isLoading || isSuccess}
-        className="btn rounded-full border border-black/20 dark:border-white/40 max-w-44 p-3 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent hover:bg-accent hover:text-black group relative cursor-pointer disabled:opacity-60 text-zinc-900 dark:text-white font-bold text-sm shadow-xs hover:shadow-[0_0_15px_rgba(255,221,51,0.3)]"
+        className="btn rounded-full border border-border max-w-44 p-3 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent hover:bg-accent hover:text-black group relative cursor-pointer disabled:opacity-60 text-foreground font-bold text-sm shadow-xs hover:shadow-[0_0_15px_rgba(255,221,51,0.3)]"
       >
         <span
           className={`${isLoading || isSuccess ? "" : "group-hover:translate-y-[-120%] group-hover:opacity-0"} transition-all duration-500 font-bold text-sm`}

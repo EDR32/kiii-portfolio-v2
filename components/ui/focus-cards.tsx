@@ -26,7 +26,7 @@ export const FocusCard = React.memo(
         onMouseLeave={() => setHovered(null)}
         className={cn(
           "transition-all duration-300 ease-out h-full",
-          isOtherHovered && "blur-[2.5px] scale-[0.98] opacity-50 dark:opacity-40",
+          isOtherHovered && "blur-[2.5px] scale-[0.98] opacity-50",
           isHovered && "scale-[1.01] z-10",
           className
         )}
@@ -55,7 +55,7 @@ export const Card = React.memo(
       onMouseEnter={() => setHovered(index)}
       onMouseLeave={() => setHovered(null)}
       className={cn(
-        "rounded-2xl relative bg-gray-100 dark:bg-neutral-900 overflow-hidden h-60 md:h-96 w-full transition-all duration-300 ease-out",
+        "rounded-2xl relative bg-muted overflow-hidden h-60 md:h-96 w-full transition-all duration-300 ease-out",
         hovered !== null && hovered !== index && "blur-sm scale-[0.98] opacity-60"
       )}
     >

@@ -1,5 +1,12 @@
 import { ProjectItem, WorkSlide } from "../@types/type";
 
+export const workHeaderData = {
+  titlePrefix: "My ",
+  titleHighlight: "Work",
+  description:
+    "Kumpulan proyek pengembangan aplikasi web modern, mulai dari CRM Portal & CMS, sistem management fast tournament, sistem informasi manajemen klinik serta portal monitoring CCTV.",
+};
+
 export const projectsData: ProjectItem[] = [
   {
     id: "serang-cctv",

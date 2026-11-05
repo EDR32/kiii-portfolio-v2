@@ -54,9 +54,9 @@ export const Timeline = ({
     >
       {(title || description) && (
         <div className="max-w-7xl mx-auto py-10 px-4 md:px-8 lg:px-10">
-          {title && <div className="text-2xl md:text-5xl font-bold mb-4 text-white">{title}</div>}
+          {title && <div className="text-2xl md:text-5xl font-bold mb-4 text-foreground">{title}</div>}
           {description && (
-            <div className="text-white/70 text-sm md:text-base max-w-2xl leading-relaxed">
+            <div className="text-muted-foreground text-sm md:text-base max-w-2xl leading-relaxed">
               {description}
             </div>
           )}
@@ -67,16 +67,16 @@ export const Timeline = ({
         {data.map((item, index) => (
           <div key={index} className="flex justify-start pt-10 md:pt-28 md:gap-10">
             <div className="sticky flex flex-col md:flex-row z-30 items-center top-28 self-start max-w-xs lg:max-w-sm md:w-full">
-              <div className="h-10 absolute left-0 sm:left-1 w-10 rounded-full bg-white dark:bg-card border border-black/10 dark:border-white/10 flex items-center justify-center shadow-md dark:shadow-black/60">
+              <div className="h-10 absolute left-0 sm:left-1 w-10 rounded-full bg-card border border-border flex items-center justify-center shadow-md">
                 <div className="h-4 w-4 rounded-full bg-accent border border-accent shadow-[0_0_12px_rgba(255,221,51,0.6)]" />
               </div>
-              <h3 className="hidden md:block text-xl md:pl-20 md:text-4xl lg:text-5xl font-bold text-zinc-400 dark:text-white/40">
+              <h3 className="hidden md:block text-xl md:pl-20 md:text-4xl lg:text-5xl font-bold text-muted-foreground/50">
                 {item.title}
               </h3>
             </div>
 
             <div className="relative pl-16 pr-4 md:pl-4 md:pr-0 w-full">
-              <h3 className="md:hidden block text-xl mb-4 text-left font-bold text-accent-darker dark:text-accent">
+              <h3 className="md:hidden block text-xl mb-4 text-left font-bold text-accent">
                 {item.title}
               </h3>
               {item.content}
@@ -88,7 +88,7 @@ export const Timeline = ({
           style={{
             height: height - 180 + "px",
           }}
-          className="absolute md:left-6 left-6 top-10 md:top-28 w-0.5 bg-black/10 dark:bg-white/15 rounded-full"
+          className="absolute md:left-6 left-6 top-10 md:top-28 w-0.5 bg-border rounded-full"
         >
           <motion.div
             style={{
